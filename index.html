@@ -34,27 +34,57 @@
 </head>
 
 <body>
+    <!-- ======= Venue Section ======= -->
+    <section id="venue">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Event Venue</h2>
+            </div>
+            <div id="map-container">
+                <div id="map">
+                    <!-- Search input and button -->
+                    <button id="toggleSearchBtn" class="btn btn-light">
+                        <img id="searchIcon" src="assets/img/map-markers/magnifying-glass.png" alt="Search Icon">
+                    </button>
+                    <div id="search-container">
+                        <input type="text" id="searchTerms" class="form-control mb-3" />
+                        <button id="searchBtn" class="btn btn-dark">Search</button>
+                        <div id="search-results">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Venue Section -->
 
-    <!-- Bootstrap CSS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"></script>
 
-  <!-- Axios -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+    </footer><!-- End  Footer -->
 
-  <!-- Leaflet -->
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
+
+    <!-- ======= JS Plug-ins ======= -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
 
     <!-- Leaflet MarkerClusterGroup JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/index.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

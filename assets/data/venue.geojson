@@ -1,0 +1,209 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "USA",
+				"City/State": "Miami, Florida",
+				"Stadium": "Hard Rock Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					-80.23873322926566,
+					25.957645225565386
+				],
+				"type": "Point"
+			},
+			"id": 0
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "USA",
+				"City/State": "New Orleans, Los Angeles",
+				"Stadium": "Caesars SuperDome"
+			},
+			"geometry": {
+				"coordinates": [
+					-90.0816592821416,
+					29.95114600877571
+				],
+				"type": "Point"
+			},
+			"id": 1
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "USA",
+				"City/State": "Indianapolis, Indiana",
+				"Stadium": "Lucas Oil Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					-86.16394561704784,
+					39.7600345971116
+				],
+				"type": "Point"
+			},
+			"id": 2
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "Australia",
+				"City/State": "Sydney",
+				"Stadium": "Accor Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					151.06339841066864,
+					-33.847174576613945
+				],
+				"type": "Point"
+			},
+			"id": 3
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "Singapore",
+				"City/State": "Singapore",
+				"Stadium": "National Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					103.87438048463099,
+					1.3042868542286072
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "France",
+				"City/State": "Paris",
+				"Stadium": "Paris La Défense Arena"
+			},
+			"geometry": {
+				"coordinates": [
+					2.2296112476008716,
+					48.89558547065408
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "Sweden",
+				"City/State": "Stockholm",
+				"Stadium": "Friends Arena"
+			},
+			"geometry": {
+				"coordinates": [
+					18.000460026669145,
+					59.37258880251332
+				],
+				"type": "Point"
+			},
+			"id": 6
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "Portugal",
+				"City/State": "Lisbon",
+				"Stadium": "Estádio Luz"
+			},
+			"geometry": {
+				"coordinates": [
+					-9.183570560153186,
+					38.75291984731666
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "Spain",
+				"City/State": "Madrid",
+				"Stadium": "Estadio Santiago Bernabéu"
+			},
+			"geometry": {
+				"coordinates": [
+					-3.688233615968045,
+					40.452991445358464
+				],
+				"type": "Point"
+			},
+			"id": 8
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "France",
+				"City/State": "Lyon",
+				"Stadium": "Groupama Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					4.982152241211907,
+					45.76508359291546
+				],
+				"type": "Point"
+			},
+			"id": 9
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "United Kingdom",
+				"City/State": "Edinburgh",
+				"Stadium": "Scottish Gas Murrayfield Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					-3.24044429997673,
+					55.94197873790213
+				],
+				"type": "Point"
+			},
+			"id": 10
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "United Kingdom",
+				"City/State": "Liverpool",
+				"Stadium": "Anfield Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					-2.960754501504141,
+					53.430779849566875
+				],
+				"type": "Point"
+			},
+			"id": 11
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"Country": "United Kingdom",
+				"City/State": "Cardiff",
+				"Stadium": "Principality Stadium"
+			},
+			"geometry": {
+				"coordinates": [
+					-3.1824841683193483,
+					51.478321849482626
+				],
+				"type": "Point"
+			}
+		}
+	]
+}
