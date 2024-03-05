@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+# Venue Section
+--------------------------------------------------------------*/
+
+/* Map elements */
+
+#map {
+    height: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#map-container {
+    position: relative;
+  }
+
+
+/* Custom CSS for venue cluster icon */
+.venue-cluster-icon {
+    background-color: rgba(255, 255, 255, 0.609); /* Set background color to transparent */
+    color: #b7065b; /* Text color of the cluster icon */
+    border-radius: 50%; /* Border radius to make the icon circular */
+    font-family: cursive;
+    text-align: center; /* Center-align text */
+    font-size: 30px; /* Font size of the text */
+    line-height: 40px; /* Line height to vertically center the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding:5%;
+  }
+  
+  /* Style the image inside the cluster icon */
+  .venue-cluster-icon img {
+    width: 40px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Add spacing between image and count */
+  }
+  
+  #search-container {
+    position: absolute;
+    margin-top: 4%;
+    top: 50px;
+    left: 50px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    min-width: 250px;
+    max-width: 250px;
+    display:none;
+  
+  }
+  
+  #searchBtn.btn.btn-dark {
+    background-color: #f42880;
+    border-color:  #f42880;
+  }
+  #search-results {
+    max-height: 300px;
+    overflow-y: scroll;
+  
+  }
+  
+  #toggleSearchBtn {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    z-index: 1000;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  #searchIcon {
+    height: 20px;
+    width: 20px;
+  }
+  
+  @media screen and (min-width: 767px ) {
+    #search-container {
+        display: block;
+        min-width: 300px;
+        max-width: 300px;
+        top: 20px;
+    }
+  }
+  
