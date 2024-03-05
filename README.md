@@ -3,9 +3,7 @@
 
 - Website icon
 
-    - [#4 Red Album Cover] [4-red-cover.png](https://en.wikipedia.org/wiki/Red_(Taylor%27s_Version))
-
-    *Image Credit: [Republic]*
+    - [#4 Red Album Cover] [4-red-cover.png](https://en.wikipedia.org/wiki/Red_(Taylor%27s_Version)) *Image Credit: [Republic]*
 
 
 - Map Markers
@@ -23,7 +21,7 @@
 
 - Hero Image
 
-    - [Home Background] [People at Concert](https://www.pexels.com/photo/people-at-concert-1105666/) *Image Credit: [Vishnu R Nair]*
+    - [People at Concert] [hero-bg.jpg](https://www.pexels.com/photo/people-at-concert-1105666/) *Image Credit: [Vishnu R Nair]*
 
 **Card Images**
 
