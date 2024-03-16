@@ -35,29 +35,76 @@
 
 <body>
     <!-- ======= Header ======= -->
-    <header id="header" class="d-flex">
-        <nav class="navbar fixed-top bg-body-tertiary">
-            <div class="container-fluid d-flex justify-content-between align-items-center">
-                <div id="logo">
-                    <img src="assets/img/card-images/4-red-cover.png" alt="Logo">
+    <header id="header">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a id="logo" class="navbar-brand" href="#">
+                <img src="assets/img/taylor-swift-logo.png" alt="taylor-swift-logo.png" title="taylor-swift-logo.png">
+              </a>
+              <div id="navbarlink">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#welcome">Welcome</a></li>
+                    <li><a class="nav-link scrollto" href="#venue">Event Venue</a></li>
+                    <li><a class="nav-link scrollto" href="#highlights">Highlights</a></li>
+                    <li><a class="nav-link scrollto" href="#subscribe">Subscribe</a></li>
+                </ul>
+              </div>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">The Eras Tour</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <a class="navbar-brand" href="#"></a>
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                    aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        ...
-                    </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#welcome">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#venue">Event Venue</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#highlights">Highlights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#subscribe">Subscribe</a>
+                      </li>
+                    <!-- <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul> -->
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                  </form>
                 </div>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header><!-- End Header Section -->
+
+    <!-- ======= Welcome Section ======= -->
+    <section id="welcome">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Welcome</h2>
+            </div>
+        </div>
+    </section><!-- End Welcome Section -->
+
     <!-- ======= Venue Section ======= -->
     <section id="venue">
         <div class="container-fluid" data-aos="fade-up">
@@ -66,7 +113,28 @@
             </div>
             <div id="map-container">
                 <div id="map">
-                    <!-- Search input and button -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h2 class="fs-5">Popover in a modal</h2>
+                                    <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
+                                    <hr>
+                                    <h2 class="fs-5">Tooltips in a modal</h2>
+                                    <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Search input and button -->
                     <button id="toggleSearchBtn" class="btn btn-light">
                         <img id="searchIcon" src="assets/img/map-markers/magnifying-glass.png" alt="Search Icon">
                     </button>
@@ -81,7 +149,24 @@
         </div>
     </section><!-- End Venue Section -->
 
+    <!-- ======= Highlights Section ======= -->
+    <section id="highlights">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Highlights</h2>
+            </div>
+        </div>
+    </section><!-- End Highlights Section -->
 
+    <!-- ======= Subscribe Section ======= -->
+    <section id="subscribe">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Subscribe</h2>
+            </div>
+        </div>
+    </section><!-- End Subscribe Section -->
+    
     <!-- ======= Footer ======= -->
     <footer id="footer">
     </footer><!-- End  Footer -->

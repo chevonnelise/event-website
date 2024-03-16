@@ -2,11 +2,25 @@
 # General
 --------------------------------------------------------------*/
 
-#logo img {
-  width: 8vw; 
-  height: 8vh; 
+@media screen and (min-width: 320px ) {
+  #logo img {
+    width: 30vw; 
+    height: 5vh; 
+  }
+}
+@media screen and (min-width: 425px ) {
+  #logo img {
+    width: 25vw; 
+    height: 5vh; 
+  }
 }
 
+@media screen and (min-width: 768px ) {
+  #logo img {
+    width: 15vw; 
+    height: 5vh; 
+  }
+}
 
 body {
   background: #fff;
@@ -14,12 +28,46 @@ body {
   font-family: "Montserrat", serif;
 }
 
+@media screen and (max-width: 425px) and (min-width: 320px)  {
+  #navbarlink{
+    display:none;
+  }
+}
 
+@media screen and (min-width: 768px ) {
+#navbarlink ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  color: #fff;
+}
+#navbarlink li {
+  position: relative;
+  color: #fff;
+}
+
+#navbarlink>ul>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 12px;
+}
+}
+
+/*--------------------------------------------------------------
+# Welcome Section
+--------------------------------------------------------------*/
+
+#welcome {
+  margin-top: 80px;
+}
 
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
-
+#venue {
+  margin-top: 50px;
+}
 /* Map elements */
 
 #map {
@@ -107,3 +155,11 @@ body {
     }
   }
   
+/*--------------------------------------------------------------
+# Highlights Section
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
