@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
+    // modal button
+    // Hide modal button when modal is shown
+    document.getElementById('staticBackdrop').addEventListener('shown.bs.modal', function () {
+        document.getElementById('modal-button').style.display = 'none';
+    });
+
+    // Show modal button when modal is hidden
+    document.getElementById('staticBackdrop').addEventListener('hidden.bs.modal', function () {
+        document.getElementById('modal-button').style.display = 'block';
+    });
+
+
     // setup the map
     const map = L.map('map').setView([1.3521, 103.8198], 12);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
@@ -16,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             return L.divIcon({
                 html: `<div class="venue-cluster-icon"><img src="assets/img/map-markers/microphone.png">${childCount}</div>`,
                 className: 'venue-cluster',
-                
+
                 iconSize: L.point(100, 100)
             });
         }
@@ -73,11 +85,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     const BASE_API_URL = "https://api.foursquare.com/v3";
     const API_KEY = "fsq3wvnLGd2aP9AqDQAVE8JuRvhzlab05d3vi2sdPjueMNE="
 
-    /**
- * Add markers to a map
- * @param {Object} searchResults Array of objects from FourSquare
- * @param {*} layer The Leaflet Layer to add to
- */
+    //Add markers to a map
+
     async function addMarkersToMap(searchResults, layer, map) {
         // Remove all existing markers from the provided layer
         layer.clearLayers();
@@ -202,17 +211,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     });
 
-    document.querySelector("#toggleSearchBtn").addEventListener("click", function () {
-        const searchContainer = document.querySelector("#search-container");
-        const style = window.getComputedStyle(searchContainer);
-        // if the search container is already visible, we'll hide it
-        if (style.display != "none") {
-            searchContainer.style.display = "none";
-        } else {
-            // otherwise, show it
-            searchContainer.style.display = 'block';
-        }
-    })
+    
 
     const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
         attribution: 'Your attribution here'

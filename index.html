@@ -38,41 +38,46 @@
     <header id="header">
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-              <a id="logo" class="navbar-brand" href="#">
-                <img src="assets/img/taylor-swift-logo.png" alt="taylor-swift-logo.png" title="taylor-swift-logo.png">
-              </a>
-              <div id="navbarlink">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#welcome">Welcome</a></li>
-                    <li><a class="nav-link scrollto" href="#venue">Event Venue</a></li>
-                    <li><a class="nav-link scrollto" href="#highlights">Highlights</a></li>
-                    <li><a class="nav-link scrollto" href="#subscribe">Subscribe</a></li>
-                </ul>
-              </div>
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">The Eras Tour</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a id="logo" class="navbar-brand" href="#">
+                    <img src="assets/img/taylor-swift-logo.png" alt="taylor-swift-logo.png"
+                        title="taylor-swift-logo.png">
+                </a>
+                <div id="navbarlink">
+                    <ul>
+                        <li><a class="nav-link scrollto" href="#welcome">Welcome</a></li>
+                        <li><a class="nav-link scrollto" href="#venue">Event Venue</a></li>
+                        <li><a class="nav-link scrollto" href="#highlights">Highlights</a></li>
+                        <li><a class="nav-link scrollto" href="#subscribe">Subscribe</a></li>
+                    </ul>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#welcome">Welcome</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#venue">Event Venue</a>
-                      </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#highlights">Highlights</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#subscribe">Subscribe</a>
-                      </li>
-                    <!-- <li class="nav-item dropdown">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">The Eras Tour</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#welcome">Welcome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#venue">Event Venue</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#highlights">Highlights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#subscribe">Subscribe</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
                       </a>
@@ -86,14 +91,14 @@
                       </ul>
                     </li>
                   </ul> -->
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                  </form>
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header><!-- End Header Section -->
 
     <!-- ======= Welcome Section ======= -->
@@ -113,35 +118,45 @@
             </div>
             <div id="map-container">
                 <div id="map">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
+                    <!-- Button trigger modal -->
+                    <button id="modal-button" type="button" class="btn btn-light" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <img id="searchIcon" src="assets/img/map-markers/magnifying-glass.png"
+                                            alt="Search Icon">
                     </button>
+
+
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                    <div class="modal" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h5 class="modal-title" id="staticBackdropLabel">Search for other places</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h2 class="fs-5">Popover in a modal</h2>
-                                    <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</button> triggers a popover on click.</p>
-                                    <hr>
-                                    <h2 class="fs-5">Tooltips in a modal</h2>
-                                    <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+                                    <!-- Modal content goes here -->
+                                    <!-- Search input and button -->
+                                    <div id="result-container">
+                                        <div id="search-container">
+                                            <input type="text" id="searchTerms" class="form-control mb-3" />
+                                            <div id="search-results">
+                                            </div>
+                                        </div>
+                                        <button id="searchBtn" class="btn btn-light">
+                                            <img id="searchIcon" src="assets/img/map-markers/magnifying-glass.png"
+                                            alt="Search Icon">
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                      <!-- Search input and button -->
-                    <button id="toggleSearchBtn" class="btn btn-light">
-                        <img id="searchIcon" src="assets/img/map-markers/magnifying-glass.png" alt="Search Icon">
-                    </button>
-                    <div id="search-container">
-                        <input type="text" id="searchTerms" class="form-control mb-3" />
-                        <button id="searchBtn" class="btn btn-dark">Search</button>
-                        <div id="search-results">
                         </div>
                     </div>
                 </div>
@@ -166,7 +181,7 @@
             </div>
         </div>
     </section><!-- End Subscribe Section -->
-    
+
     <!-- ======= Footer ======= -->
     <footer id="footer">
     </footer><!-- End  Footer -->
