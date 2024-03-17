@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", async function () {
 
     document.getElementById("play-button").addEventListener("click", function () {
@@ -392,6 +393,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }, 30 * 1000);
 
+
     // const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
     //     attribution: 'Your attribution here'
     // }).addTo(map);
@@ -407,6 +409,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     L.control.layers(baseLayers).addTo(map);
 });
+
 
 async function loadTaxi() {
     // load in all the available taxi using the Taxi Availablity API
