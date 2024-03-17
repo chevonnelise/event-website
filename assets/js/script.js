@@ -1,10 +1,28 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
+    // Get the side pane element
+    const sidePane = document.getElementById('side-pane');
+
+    // Get the top offset of the content section where you want the side pane to hide
+    const hideOffset = document.getElementById('venue').offsetTop;
+
+    // Add event listener to window scroll event
+    window.addEventListener('scroll', function () {
+        // Check if the scroll position is past the hideOffset
+        if (window.scrollY >= hideOffset) {
+            // Hide the side pane
+            sidePane.style.display = 'none';
+        } else {
+            // Show the side pane
+            sidePane.style.display = 'block';
+        }
+    });
+
     // modal button
     // Hide modal button when modal is shown
-    document.getElementById('staticBackdrop').addEventListener('shown.bs.modal', function () {
-        document.getElementById('modal-button').style.display = 'none';
-    });
+    // document.getElementById('staticBackdrop').addEventListener('shown.bs.modal', function () {
+    //     document.getElementById('modal-button').style.display = 'none';
+    // });
 
     // Show modal button when modal is hidden
     document.getElementById('staticBackdrop').addEventListener('hidden.bs.modal', function () {
@@ -169,8 +187,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                     query: encodeURI(searchTerms),
                     ll: lat + "," + lng,
                     sort: "DISTANCE",
-                    radius: 5000,
-                    limit: 50
+                    radius: 3000,
+                    limit: 10
                 },
                 headers: {
                     Accept: "application/json",
@@ -211,7 +229,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     });
 
-    
+
 
     const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
         attribution: 'Your attribution here'
