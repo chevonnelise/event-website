@@ -247,7 +247,106 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     });
 
+    //2. Weather 
+    // Function to fetch weather data for a specific location (Open Meteo API)
+    // 2. Weather 
+    // Function to fetch weather data for a specific location (Open Meteo API)
+    async function fetchWeatherData(latitude, longitude) {
+        try {
+            const response = await axios.get('https://api.open-meteo.com/v1/gfs', {
+                params: {
+                    latitude: latitude,
+                    longitude: longitude,
+                    hourly: 'temperature_2m',
+                    timezone: 'auto'
+                }
+            });
+            return response.data;
+            
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+            return null;
+        }
+    }
 
+    // Leaflet Routing Machine
+    // Define control variable for Leaflet Routing Machine
+    let userIcon = new L.Icon({
+        iconUrl: 'assets/img/user.png',
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    const control = L.Routing.control({
+        routeWhileDragging: true,
+        geocoder: L.Control.Geocoder.nominatim({
+            language: 'en' // Set language to English
+        }),
+        createMarker: function (i, wp, nWps) {
+            if (i === 0 || i === nWps - 1) {
+                return L.marker(wp.latLng, {
+                    icon: userIcon
+                });
+            } else {
+                return L.marker(wp.latLng, {
+                    icon: myViaIcon
+                });
+            }
+        }
+    });
+    control.addTo(map);
+
+    // navContainer - Get references to HTML elements 
+    const navContainer = document.getElementById('navContainer');
+    const startBtn = document.getElementById('startBtn');
+    const destBtn = document.getElementById('destBtn');
+    const weatherContainer = document.getElementById('weatherContainer');
+
+    // navContainer
+    map.on('click', function (e) {
+        // Create popups
+        const navPopup = L.popup().setLatLng(e.latlng).setContent(navContainer);
+        const weatherPopup = L.popup({
+            offset:[0,180]
+        }).setLatLng(e.latlng).setContent(weatherContainer);
+    
+        // Clear existing contents of popups
+        navContainer.innerHTML = '';
+        weatherContainer.innerHTML = '';
+    
+        // Append start and destination buttons to the navContainer
+        navContainer.appendChild(startBtn);
+        navContainer.appendChild(destBtn);
+    
+        // Append weather container to the weatherContainer
+        fetchWeatherData(e.latlng.lat, e.latlng.lng)
+            .then(weatherData => {
+                weatherContainer.innerHTML = `
+                    <h4>Weather Information</h4>
+                    <h5>Temperature: ${weatherData.hourly.temperature_2m[0]}°C</h5>
+                `;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+    
+        // Open popups on the map
+        navPopup.addTo(map);
+        weatherPopup.addTo(map);
+    
+        // Event listeners for start and destination buttons
+        L.DomEvent.on(startBtn, 'click', function () {
+            control.spliceWaypoints(0, 1, e.latlng);
+            map.closePopup();
+        });
+    
+        L.DomEvent.on(destBtn, 'click', function () {
+            control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+            map.closePopup();
+        });
+    });
+    
 
     const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
         attribution: 'Your attribution here'

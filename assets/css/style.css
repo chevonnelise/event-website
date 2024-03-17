@@ -354,10 +354,42 @@ h1 {
   }
 } */
 
+#navContainer.container-fluid {
+  align-items: center;
+  padding:10px;
+}
+
+#weatherContainer{
+  width:20vh;
+}
+
+.leaflet-popup-tip {
+  background: rgba(0, 0, 0, 0) !important;
+  box-shadow: none !important;
+  /* transform: rotate(180deg) translateY(140px);
+  background: white;
+  z-index: 8000; */
+}
+
+/* Style for startBtn */
+#startBtn {
+  background-color: #f42880;
+  margin-bottom: 5px;
+  width: 90%;
+}
+
+/* Style for destBtn */
+#destBtn {
+  background-color: #941c50;
+  width: 90%;
+}
+
 /*--------------------------------------------------------------
 # Highlights Section
 --------------------------------------------------------------*/
-
+.card {
+  margin:10px;
+}
 
 /*--------------------------------------------------------------
 # Subscribe Section

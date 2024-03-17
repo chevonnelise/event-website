@@ -29,6 +29,12 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
 
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+
+    <!-- Leaflet Geocoder CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -95,7 +101,7 @@
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-light" type="submit">
                                     <img src="assets/img/search-heart.png" alt="search-heart.png"
-                                    title="search-heart.png">                          
+                                        title="search-heart.png">
                                 </button>
                             </form>
                     </div>
@@ -114,16 +120,16 @@
             </a>
             <div id="play-button-modal" class="modal">
                 <div class="modal-content">
-                  <!-- Your content goes here -->
-                  <span class="close">&times;</span>
-                  <a href="#highlights"></a>
-                  <h1>Missed the tour?</h1>
-                  <br>
-                  <h3>Click on each album to play videos from the tour</h3>
+                    <!-- Your content goes here -->
+                    <span class="close">&times;</span>
+                    <a href="#highlights"></a>
+                    <h1>Missed the tour?</h1>
+                    <br>
+                    <h3>Click on each album to play videos from the tour</h3>
                 </div>
-              </div>
+            </div>
             <!-- <a href="#about" class="about-btn scrollto">About The Event</a> -->
-          </div>
+        </div>
     </section><!-- End Welcome Section -->
 
     <!-- ======= Venue Section ======= -->
@@ -137,14 +143,14 @@
                 <div id="map">
                     <!-- side pane -->
                     <div id="side-pane" class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: 4rem;">
-                        <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
-                            data-bs-placement="right" data-bs-original-title="Icon-only"
+                        <a href="#venue" class="d-block p-3 link-body-emphasis text-decoration-none"
+                            data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only"
                             aria-describedby="tooltip135440">
                             <img id="ts-icon" src="assets/img/side-pane/ts_silouhette.png" alt="ts-icon">
                         </a>
                         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                             <li class="nav-item">
-                                <a href="#" class="nav-link py-3" aria-current="page"
+                                <a id="weather" href="#venue" class="nav-link py-3" aria-current="page"
                                     data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home"
                                     data-bs-original-title="Home">
                                     <svg width="32" height="32" viewBox="0 -5 16 22" fill="none"
@@ -161,51 +167,76 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link py-3" aria-current="page"
-                                    data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home"
-                                    data-bs-original-title="Home">
+                                <a href="#venue" class="nav-link py-3" aria-current="page" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
                                     <!-- Button trigger modal -->
                                     <button id="modal-button" type="button" class="btn btn-light" data-bs-toggle="modal"
                                         data-bs-target="#staticBackdrop">
-                                        <img src="assets/img/side-pane/search.png" alt="search.png"
-                        title="search.png">                                     
+                                        <img src="assets/img/side-pane/search.png" alt="search.png" title="search.png">
                                     </button>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link py-3" data-bs-toggle="tooltip"
+                                <a href="#venue" class="nav-link py-3" data-bs-toggle="tooltip"
                                     data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
-                                    <svg width="30" height="30" viewBox="0 -5 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.62127 1.48503C7.43597 1.03136 8.56403 1.03136 10.3787 1.48503C11.1625 1.68097 12.1217 2.15771 12.9062 2.60368C13.5939 2.99461 14 3.75153 14 4.58299V13.4999C14 14.3284 13.3284 14.9999 12.5 14.9999H3.5C2.67157 14.9999 2 14.3284 2 13.4999V4.58299C2 3.75153 2.40607 2.99461 3.09376 2.60368C3.87826 2.15771 4.83753 1.68097 5.62127 1.48503ZM10.6213 0.514889C8.64733 0.0214041 7.35267 0.0214041 5.37873 0.514889C4.45523 0.745764 3.39693 1.28105 2.59956 1.73433C1.56486 2.32253 1 3.4332 1 4.58299V13.4999C1 14.8807 2.11929 15.9999 3.5 15.9999H12.5C13.8807 15.9999 15 14.8807 15 13.4999V4.58299C15 3.4332 14.4351 2.32253 13.4004 1.73433C12.6031 1.28105 11.5448 0.745764 10.6213 0.514889ZM5 12.9999C5 13.5522 4.55228 13.9999 4 13.9999C3.44772 13.9999 3 13.5522 3 12.9999C3 12.4477 3.44772 11.9999 4 11.9999C4.55228 11.9999 5 12.4477 5 12.9999ZM5 12.9999C5 12.4477 5.44772 11.9999 6 11.9999C6.55228 11.9999 7 12.4477 7 12.9999C7 13.5522 6.55228 13.9999 6 13.9999C5.44772 13.9999 5 13.5522 5 12.9999ZM12 13.9999C12.5523 13.9999 13 13.5522 13 12.9999C13 12.4477 12.5523 11.9999 12 11.9999C11.4477 11.9999 11 12.4477 11 12.9999C11 12.4477 10.5523 11.9999 10 11.9999C9.44772 11.9999 9 12.4477 9 12.9999C9 13.5522 9.44772 13.9999 10 13.9999C10.5523 13.9999 11 13.5522 11 12.9999C11 13.5522 11.4477 13.9999 12 13.9999ZM4.5 4.99994C4.22386 4.99994 4 5.2238 4 5.49994V7.49994C4 7.77608 4.22386 7.99994 4.5 7.99994H7.5V4.99994H4.5ZM8.5 4.99994V7.99994H11.5C11.7761 7.99994 12 7.77608 12 7.49994V5.49994C12 5.2238 11.7761 4.99994 11.5 4.99994H8.5ZM3 5.49994C3 4.67152 3.67157 3.99994 4.5 3.99994H8H11.5C12.3284 3.99994 13 4.67151 13 5.49994V7.49994C13 8.32837 12.3284 8.99994 11.5 8.99994H8H4.5C3.67157 8.99994 3 8.32837 3 7.49994V5.49994ZM6.5 1.99996C6.22386 1.99996 6 2.22382 6 2.49996C6 2.7761 6.22386 2.99996 6.5 2.99996H9.5C9.77614 2.99996 10 2.7761 10 2.49996C10 2.22382 9.77614 1.99996 9.5 1.99996H6.5Z" fill="black"/>
-                                        </svg>
+                                    <svg width="30" height="30" viewBox="0 -5 16 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.62127 1.48503C7.43597 1.03136 8.56403 1.03136 10.3787 1.48503C11.1625 1.68097 12.1217 2.15771 12.9062 2.60368C13.5939 2.99461 14 3.75153 14 4.58299V13.4999C14 14.3284 13.3284 14.9999 12.5 14.9999H3.5C2.67157 14.9999 2 14.3284 2 13.4999V4.58299C2 3.75153 2.40607 2.99461 3.09376 2.60368C3.87826 2.15771 4.83753 1.68097 5.62127 1.48503ZM10.6213 0.514889C8.64733 0.0214041 7.35267 0.0214041 5.37873 0.514889C4.45523 0.745764 3.39693 1.28105 2.59956 1.73433C1.56486 2.32253 1 3.4332 1 4.58299V13.4999C1 14.8807 2.11929 15.9999 3.5 15.9999H12.5C13.8807 15.9999 15 14.8807 15 13.4999V4.58299C15 3.4332 14.4351 2.32253 13.4004 1.73433C12.6031 1.28105 11.5448 0.745764 10.6213 0.514889ZM5 12.9999C5 13.5522 4.55228 13.9999 4 13.9999C3.44772 13.9999 3 13.5522 3 12.9999C3 12.4477 3.44772 11.9999 4 11.9999C4.55228 11.9999 5 12.4477 5 12.9999ZM5 12.9999C5 12.4477 5.44772 11.9999 6 11.9999C6.55228 11.9999 7 12.4477 7 12.9999C7 13.5522 6.55228 13.9999 6 13.9999C5.44772 13.9999 5 13.5522 5 12.9999ZM12 13.9999C12.5523 13.9999 13 13.5522 13 12.9999C13 12.4477 12.5523 11.9999 12 11.9999C11.4477 11.9999 11 12.4477 11 12.9999C11 12.4477 10.5523 11.9999 10 11.9999C9.44772 11.9999 9 12.4477 9 12.9999C9 13.5522 9.44772 13.9999 10 13.9999C10.5523 13.9999 11 13.5522 11 12.9999C11 13.5522 11.4477 13.9999 12 13.9999ZM4.5 4.99994C4.22386 4.99994 4 5.2238 4 5.49994V7.49994C4 7.77608 4.22386 7.99994 4.5 7.99994H7.5V4.99994H4.5ZM8.5 4.99994V7.99994H11.5C11.7761 7.99994 12 7.77608 12 7.49994V5.49994C12 5.2238 11.7761 4.99994 11.5 4.99994H8.5ZM3 5.49994C3 4.67152 3.67157 3.99994 4.5 3.99994H8H11.5C12.3284 3.99994 13 4.67151 13 5.49994V7.49994C13 8.32837 12.3284 8.99994 11.5 8.99994H8H4.5C3.67157 8.99994 3 8.32837 3 7.49994V5.49994ZM6.5 1.99996C6.22386 1.99996 6 2.22382 6 2.49996C6 2.7761 6.22386 2.99996 6.5 2.99996H9.5C9.77614 2.99996 10 2.7761 10 2.49996C10 2.22382 9.77614 1.99996 9.5 1.99996H6.5Z"
+                                            fill="black" />
+                                    </svg>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link py-3" data-bs-toggle="tooltip"
+                                <a href="#venue" class="nav-link py-3" data-bs-toggle="tooltip"
                                     data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard"
                                     aria-describedby="tooltip749679">
-                                    <svg width="30" height="30" viewBox="0 -5 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.8618 5.27639L3.9057 7.18861C3.72959 7.54081 4.01095 7.95195 4.40346 7.92034C5.31207 7.84716 6.75319 7.75 8 7.75C9.24681 7.75 10.6879 7.84716 11.5965 7.92034C11.989 7.95195 12.2704 7.54081 12.0943 7.18861L11.1382 5.27639C11.0535 5.107 10.8804 5 10.691 5H5.30902C5.11963 5 4.9465 5.107 4.8618 5.27639Z" fill="black"/>
-                                        <path d="M4 10C4 10.5523 3.55228 11 3 11C2.44772 11 2 10.5523 2 10C2 9.44772 2.44772 9 3 9C3.55228 9 4 9.44772 4 10Z" fill="black"/>
-                                        <path d="M14 10C14 10.5523 13.5523 11 13 11C12.4477 11 12 10.5523 12 10C12 9.44772 12.4477 9 13 9C13.5523 9 14 9.44772 14 10Z" fill="black"/>
-                                        <path d="M5 10C5 9.44772 5.44772 9 6 9H10C10.5523 9 11 9.44772 11 10C11 10.5523 10.5523 11 10 11H6C5.44772 11 5 10.5523 5 10Z" fill="black"/>
-                                        <path d="M6 1C5.44772 1 5 1.44772 5 2V3H4.81879C3.81872 3 2.91488 3.59599 2.52093 4.5152L1.72903 6.36297C1.65384 6.53842 1.51889 6.68154 1.34816 6.7669C0.849394 7.01629 0.493703 7.48198 0.384342 8.02878L0.0485483 9.70775C0.0162617 9.86918 0 10.0334 0 10.198V10.611C0 11.425 0.390331 12.1538 1 12.6085V14.5C1 14.7761 1.22386 15 1.5 15H3.5C3.77614 15 4 14.7761 4 14.5V13.162C5.29163 13.21 6.74462 13.25 8 13.25C9.25538 13.25 10.7084 13.21 12 13.162V14.5C12 14.7761 12.2239 15 12.5 15H14.5C14.7761 15 15 14.7761 15 14.5V12.6085C15.6097 12.1538 16 11.425 16 10.611V10.198C16 10.0334 15.9837 9.86918 15.9515 9.70775L15.6157 8.02878C15.5063 7.48197 15.1506 7.01629 14.6518 6.7669C14.4811 6.68154 14.3462 6.53842 14.271 6.36297L13.4791 4.5152C13.0851 3.59599 12.1813 3 11.1812 3H11V2C11 1.44772 10.5523 1 10 1H6ZM4.81879 4H11.1812C11.7812 4 12.3236 4.3576 12.5599 4.90912L13.3518 6.75689C13.5202 7.14974 13.8223 7.47019 14.2046 7.66133C14.4274 7.77271 14.5862 7.98069 14.6351 8.2249L14.9709 9.90386C14.9902 10.0007 15 10.0993 15 10.198V10.611C15 11.4075 14.3807 12.0593 13.5921 12.0952C12.0372 12.1659 9.80613 12.25 8 12.25C6.19387 12.25 3.96284 12.1659 2.40789 12.0952C1.61926 12.0593 1 11.4075 1 10.611V10.198C1 10.0993 1.00976 10.0007 1.02913 9.90386L1.36492 8.2249C1.41376 7.98069 1.57262 7.77271 1.79537 7.66133C2.17765 7.47019 2.47981 7.14974 2.64817 6.75689L3.44007 4.90912C3.67644 4.3576 4.21875 4 4.81879 4Z" fill="black"/>
-                                        </svg>
-                                        
+                                    <svg width="30" height="30" viewBox="0 -5 16 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.8618 5.27639L3.9057 7.18861C3.72959 7.54081 4.01095 7.95195 4.40346 7.92034C5.31207 7.84716 6.75319 7.75 8 7.75C9.24681 7.75 10.6879 7.84716 11.5965 7.92034C11.989 7.95195 12.2704 7.54081 12.0943 7.18861L11.1382 5.27639C11.0535 5.107 10.8804 5 10.691 5H5.30902C5.11963 5 4.9465 5.107 4.8618 5.27639Z"
+                                            fill="black" />
+                                        <path
+                                            d="M4 10C4 10.5523 3.55228 11 3 11C2.44772 11 2 10.5523 2 10C2 9.44772 2.44772 9 3 9C3.55228 9 4 9.44772 4 10Z"
+                                            fill="black" />
+                                        <path
+                                            d="M14 10C14 10.5523 13.5523 11 13 11C12.4477 11 12 10.5523 12 10C12 9.44772 12.4477 9 13 9C13.5523 9 14 9.44772 14 10Z"
+                                            fill="black" />
+                                        <path
+                                            d="M5 10C5 9.44772 5.44772 9 6 9H10C10.5523 9 11 9.44772 11 10C11 10.5523 10.5523 11 10 11H6C5.44772 11 5 10.5523 5 10Z"
+                                            fill="black" />
+                                        <path
+                                            d="M6 1C5.44772 1 5 1.44772 5 2V3H4.81879C3.81872 3 2.91488 3.59599 2.52093 4.5152L1.72903 6.36297C1.65384 6.53842 1.51889 6.68154 1.34816 6.7669C0.849394 7.01629 0.493703 7.48198 0.384342 8.02878L0.0485483 9.70775C0.0162617 9.86918 0 10.0334 0 10.198V10.611C0 11.425 0.390331 12.1538 1 12.6085V14.5C1 14.7761 1.22386 15 1.5 15H3.5C3.77614 15 4 14.7761 4 14.5V13.162C5.29163 13.21 6.74462 13.25 8 13.25C9.25538 13.25 10.7084 13.21 12 13.162V14.5C12 14.7761 12.2239 15 12.5 15H14.5C14.7761 15 15 14.7761 15 14.5V12.6085C15.6097 12.1538 16 11.425 16 10.611V10.198C16 10.0334 15.9837 9.86918 15.9515 9.70775L15.6157 8.02878C15.5063 7.48197 15.1506 7.01629 14.6518 6.7669C14.4811 6.68154 14.3462 6.53842 14.271 6.36297L13.4791 4.5152C13.0851 3.59599 12.1813 3 11.1812 3H11V2C11 1.44772 10.5523 1 10 1H6ZM4.81879 4H11.1812C11.7812 4 12.3236 4.3576 12.5599 4.90912L13.3518 6.75689C13.5202 7.14974 13.8223 7.47019 14.2046 7.66133C14.4274 7.77271 14.5862 7.98069 14.6351 8.2249L14.9709 9.90386C14.9902 10.0007 15 10.0993 15 10.198V10.611C15 11.4075 14.3807 12.0593 13.5921 12.0952C12.0372 12.1659 9.80613 12.25 8 12.25C6.19387 12.25 3.96284 12.1659 2.40789 12.0952C1.61926 12.0593 1 11.4075 1 10.611V10.198C1 10.0993 1.00976 10.0007 1.02913 9.90386L1.36492 8.2249C1.41376 7.98069 1.57262 7.77271 1.79537 7.66133C2.17765 7.47019 2.47981 7.14974 2.64817 6.75689L3.44007 4.90912C3.67644 4.3576 4.21875 4 4.81879 4Z"
+                                            fill="black" />
+                                    </svg>
+
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link py-3" data-bs-toggle="tooltip"
+                                <a href="#venue" class="nav-link py-3" data-bs-toggle="tooltip"
                                     data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
-                                    <svg width="30" height="30" viewBox="0 -5 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 11C5 11.5523 4.55228 12 4 12C3.44772 12 3 11.5523 3 11C3 10.4477 3.44772 10 4 10C4.55228 10 5 10.4477 5 11Z" fill="black"/>
-                                        <path d="M13 11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11Z" fill="black"/>
-                                        <path d="M7 10C6.44772 10 6 10.4477 6 11C6 11.5523 6.44772 12 7 12H9C9.55228 12 10 11.5523 10 11C10 10.4477 9.55228 10 9 10H7Z" fill="black"/>
-                                        <path d="M8 4C6.12439 4 4.57371 4.1088 3.4483 4.2258C3.19354 4.25229 3 4.467 3 4.72312V8.27683C3 8.53295 3.19354 8.74766 3.4483 8.77415C4.57371 8.89115 6.12439 8.99995 8 8.99995C9.87561 8.99995 11.4263 8.89115 12.5517 8.77415C12.8065 8.74766 13 8.53295 13 8.27683V4.72312C13 4.467 12.8065 4.25229 12.5517 4.2258C11.4263 4.1088 9.87561 4 8 4Z" fill="black"/>
-                                        <path d="M8 3C6.1628 3 4.64684 3.10659 3.5517 3.22044C3.27704 3.249 3.03123 3.04949 3.00268 2.77483C2.97413 2.50016 3.17364 2.25436 3.4483 2.2258C4.57371 2.1088 6.12439 2 8 2C9.87561 2 11.4263 2.1088 12.5517 2.2258C12.8264 2.25436 13.0259 2.50016 12.9973 2.77483C12.9688 3.04949 12.723 3.249 12.4483 3.22044C11.3532 3.10659 9.8372 3 8 3Z" fill="black"/>
-                                        <path d="M15 8C15.5523 8 16 7.55228 16 7V5C16 4.44772 15.5523 4 15 4V2.63961C15 1.45165 14.1546 0.407903 12.9362 0.267862C11.7916 0.136304 10.0993 0 8 0C5.90068 0 4.20839 0.136303 3.0638 0.267862C1.84541 0.407902 1 1.45165 1 2.63961V4C0.447715 4 0 4.44772 0 5V7C0 7.55228 0.447715 8 1 8V11.5C1 12.3179 1.39278 13.0441 2 13.5002V15.5C2 15.7761 2.22386 16 2.5 16H4.5C4.77614 16 5 15.7761 5 15.5V14H11V15.5C11 15.7761 11.2239 16 11.5 16H13.5C13.7761 16 14 15.7761 14 15.5V13.5002C14.6072 13.0441 15 12.3179 15 11.5V8ZM8 1C10.0564 1 11.7103 1.13354 12.822 1.26132C13.4979 1.339 14 1.92084 14 2.63961V11.5C14 12.3284 13.3284 13 12.5 13H3.5C2.67157 13 2 12.3284 2 11.5V2.63961C2 1.92084 2.50212 1.339 3.17799 1.26132C4.28971 1.13354 5.9436 1 8 1Z" fill="black"/>
-                                        </svg>
-                                        
+                                    <svg width="30" height="30" viewBox="0 -5 16 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5 11C5 11.5523 4.55228 12 4 12C3.44772 12 3 11.5523 3 11C3 10.4477 3.44772 10 4 10C4.55228 10 5 10.4477 5 11Z"
+                                            fill="black" />
+                                        <path
+                                            d="M13 11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11Z"
+                                            fill="black" />
+                                        <path
+                                            d="M7 10C6.44772 10 6 10.4477 6 11C6 11.5523 6.44772 12 7 12H9C9.55228 12 10 11.5523 10 11C10 10.4477 9.55228 10 9 10H7Z"
+                                            fill="black" />
+                                        <path
+                                            d="M8 4C6.12439 4 4.57371 4.1088 3.4483 4.2258C3.19354 4.25229 3 4.467 3 4.72312V8.27683C3 8.53295 3.19354 8.74766 3.4483 8.77415C4.57371 8.89115 6.12439 8.99995 8 8.99995C9.87561 8.99995 11.4263 8.89115 12.5517 8.77415C12.8065 8.74766 13 8.53295 13 8.27683V4.72312C13 4.467 12.8065 4.25229 12.5517 4.2258C11.4263 4.1088 9.87561 4 8 4Z"
+                                            fill="black" />
+                                        <path
+                                            d="M8 3C6.1628 3 4.64684 3.10659 3.5517 3.22044C3.27704 3.249 3.03123 3.04949 3.00268 2.77483C2.97413 2.50016 3.17364 2.25436 3.4483 2.2258C4.57371 2.1088 6.12439 2 8 2C9.87561 2 11.4263 2.1088 12.5517 2.2258C12.8264 2.25436 13.0259 2.50016 12.9973 2.77483C12.9688 3.04949 12.723 3.249 12.4483 3.22044C11.3532 3.10659 9.8372 3 8 3Z"
+                                            fill="black" />
+                                        <path
+                                            d="M15 8C15.5523 8 16 7.55228 16 7V5C16 4.44772 15.5523 4 15 4V2.63961C15 1.45165 14.1546 0.407903 12.9362 0.267862C11.7916 0.136304 10.0993 0 8 0C5.90068 0 4.20839 0.136303 3.0638 0.267862C1.84541 0.407902 1 1.45165 1 2.63961V4C0.447715 4 0 4.44772 0 5V7C0 7.55228 0.447715 8 1 8V11.5C1 12.3179 1.39278 13.0441 2 13.5002V15.5C2 15.7761 2.22386 16 2.5 16H4.5C4.77614 16 5 15.7761 5 15.5V14H11V15.5C11 15.7761 11.2239 16 11.5 16H13.5C13.7761 16 14 15.7761 14 15.5V13.5002C14.6072 13.0441 15 12.3179 15 11.5V8ZM8 1C10.0564 1 11.7103 1.13354 12.822 1.26132C13.4979 1.339 14 1.92084 14 2.63961V11.5C14 12.3284 13.3284 13 12.5 13H3.5C2.67157 13 2 12.3284 2 11.5V2.63961C2 1.92084 2.50212 1.339 3.17799 1.26132C4.28971 1.13354 5.9436 1 8 1Z"
+                                            fill="black" />
+                                    </svg>
+
                                 </a>
                             </li>
 
@@ -229,6 +260,12 @@
                         </div> -->
                     </div>
 
+                    <!-- Navigation container -->
+                    <div id="navContainer">
+                        <div id="weatherContainer"></div>
+                        <button id="startBtn" class="btn btn-dark">Start</button>
+                        <button id="destBtn" class="btn btn-dark">End</button>
+                    </div>
 
 
                     <!-- Modal -->
@@ -280,21 +317,22 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/1-taylor-swift-cover.png" class="taylor-swift-album" alt="taylor-swift-album" />
+                            <img src="assets/img/card-images/1-taylor-swift-cover.png" class="taylor-swift-album"
+                                alt="taylor-swift-album" />
                             <div class="card-body">
                                 <h5 class="card-title">Taylor Swift</h5>
                                 <p class="card-text">Album #1</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -307,7 +345,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -338,14 +376,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -357,21 +395,22 @@
                     </div>
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/2-fearless-cover.png" class="fearless-album" alt="fearless-album">
+                            <img src="assets/img/card-images/2-fearless-cover.png" class="fearless-album"
+                                alt="fearless-album">
                             <div class="card-body">
                                 <h5 class="card-title">Fearless</h5>
                                 <p class="card-text">Album #2</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -384,7 +423,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -397,19 +436,19 @@
                                                             <option value="Unplayed">Unplayed</option>
                                                         </select>
                                                     </div>
-                                                    
+
                                                     <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -421,21 +460,22 @@
                     </div>
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/3-speak-now-cover.png" class="speak-now-album" alt="speak-now-album">
+                            <img src="assets/img/card-images/3-speak-now-cover.png" class="speak-now-album"
+                                alt="speak-now-album">
                             <div class="card-body">
                                 <h5 class="card-title">Speak Now</h5>
                                 <p class="card-text">Album #3</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -448,7 +488,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -465,14 +505,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -489,16 +529,16 @@
                                 <h5 class="card-title">Red</h5>
                                 <p class="card-text">Album #4</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -511,7 +551,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -524,19 +564,19 @@
                                                             <option value="Unplayed">Unplayed</option>
                                                         </select>
                                                     </div>
-                                                    
+
                                                     <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -553,16 +593,16 @@
                                 <h5 class="card-title">1989</h5>
                                 <p class="card-text">Album #5</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -575,7 +615,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -592,14 +632,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -610,25 +650,26 @@
                         </div>
                     </div>
                     <!-- </div> -->
-    
+
                     <!-- <div class="row"> -->
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/6-reputation-cover.png" class="reputation-album" alt="reputation-album">
+                            <img src="assets/img/card-images/6-reputation-cover.png" class="reputation-album"
+                                alt="reputation-album">
                             <div class="card-body">
                                 <h5 class="card-title">Reputation</h5>
                                 <p class="card-text">Album #6</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -641,7 +682,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -658,14 +699,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -682,16 +723,16 @@
                                 <h5 class="card-title">Lover</h5>
                                 <p class="card-text">Album #7</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -704,7 +745,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -721,14 +762,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -740,21 +781,22 @@
                     </div>
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/8-folklore-cover.png" class="folklore-album" alt="folklore-album">
+                            <img src="assets/img/card-images/8-folklore-cover.png" class="folklore-album"
+                                alt="folklore-album">
                             <div class="card-body">
                                 <h5 class="card-title">Folklore</h5>
                                 <p class="card-text">Album #8</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -767,7 +809,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -784,14 +826,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -803,21 +845,22 @@
                     </div>
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/9-evermore-cover.png" class="evermore-album" alt="evermore-album" />
+                            <img src="assets/img/card-images/9-evermore-cover.png" class="evermore-album"
+                                alt="evermore-album" />
                             <div class="card-body">
                                 <h5 class="card-title">Evermore</h5>
                                 <p class="card-text">Album #9</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -830,7 +873,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -847,14 +890,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -866,21 +909,22 @@
                     </div>
                     <div class="col-sm-auto">
                         <div class="card album-card">
-                            <img src="assets/img/card-images/10-midnights-cover.png" class="midnights-album" alt="midnights-album">
+                            <img src="assets/img/card-images/10-midnights-cover.png" class="midnights-album"
+                                alt="midnights-album">
                             <div class="card-body">
                                 <h5 class="card-title">Midnights</h5>
                                 <p class="card-text">Album #10</p>
                                 <!-- Modal -->
-    
+
                                 <div id="popup">
                                     <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
                                     <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Song Checklist
                                     </button>
-    
+
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                         aria-hidden="true">
@@ -893,7 +937,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-    
+
                                                     <div class="mb-3">
                                                         <!-- <form id="todo-form"> -->
                                                         <input type="text" id="taskName" class="form-control"
@@ -910,14 +954,14 @@
                                                     <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
                                                     <!-- </form> -->
                                                     <button id="save-btn" class="btn btn-success mb-3">Save</button>
-    
+
                                                     <ul id="todoList" class="list-group">
                                                         <!-- Todo items will be appended here -->
                                                     </ul>
-    
+
                                                 </div>
-    
-    
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -966,9 +1010,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
 
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <!-- Leaflet Geocoder JS -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+
     <!-- Main JS File -->
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
