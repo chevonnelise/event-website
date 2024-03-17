@@ -1,5 +1,28 @@
-## Image Credits
-**Icons**
+## About This Project
+Upon entering the website, users are welcomed to learn more about singer Taylor Swift and her 2023-2024 Eras Tour.
+This website features 4 main sections:
+1. Welcome
+- Upon 
+2. Event Venue
+- 
+3. Highlights
+- 
+4. Subscribe
+- 
+
+## Built With
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![LeafletJS][https://leafletjs.com/]][Leaflet-url]
+* [![Google Fonts][https://fonts.googleapis.com]][Google-url]
+* [![Leaflet Routing Machine][https://www.liedman.net/leaflet-routing-machine/]][LeafletRoutingMachine-url]
+
+
+## Acknowledgements
+
+**Template Inspiration**
+* [![TheEvent Template by BootstrapMade][https://bootstrapmade.com/theevent-conference-event-bootstrap-template/]][TheEventTemplate-url]
+
+**Image Credits**
 
 - Website icon
 
@@ -27,7 +50,7 @@
 
 - Album Covers
 
-    - [#1 Taylor Swift] [1-taylor-swift-cover.png](https://en.wikipedia.org/wiki/Taylor_Swift_(album)) *Image Credit: [Big Machine]*
+    - [#1 Taylor Swift][1-taylor-swift-cover.png](https://en.wikipedia.org/wiki/Taylor_Swift_(album)) *Image Credit: [Big Machine]*
 
     - [#2 Fearless][2-fearless-cover.png](https://en.wikipedia.org/wiki/Fearless_(Taylor%27s_Version)) *Image Credit: [Republic]*
 
