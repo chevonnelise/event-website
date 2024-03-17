@@ -2,31 +2,15 @@
 # General
 --------------------------------------------------------------*/
 
-@media screen and (min-width: 320px) {
-  #logo img {
-    width: 30vw;
-    height: 5vh;
-  }
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
 }
 
-@media screen and (min-width: 425px) {
-  #logo img {
-    width: 25vw;
-    height: 5vh;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #logo img {
-    width: 15vw;
-    height: 5vh;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #logo img {
-    width: 10vw;
-    height: 5vh;
+@media (max-width: 992px) {
+  #header #logo img {
+    max-height: 30px;
   }
 }
 
@@ -59,17 +43,111 @@ body {
 
   #navbarlink>ul>li {
     white-space: nowrap;
-    padding: 10px 5px 5px 12px;
+    padding: 10px 10px 5px 12px;
   }
 }
 
+.section-header h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
 
+.section-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+.section-header::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #ff7802;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
 /*--------------------------------------------------------------
 # Welcome Section
 --------------------------------------------------------------*/
-
 #welcome {
-  margin-top: 80px;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/hero-image.jpg) top center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#welcome:before {
+  content: "";
+  background: rgba(45, 45, 45, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#welcome h5 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 3px 3px rgb(119, 4, 4);
+}
+
+#welcome h5 span {
+  color: #fefefeeb;
+}
+
+#welcome p {
+  color: #ebebeb;
+  font-weight: 700;
+  font-size: 15px;
+  text-shadow: 2px 2px rgb(119, 4, 4);
+}
+
+#welcome .hero-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 90px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background-color: #742416; /* Red color, you can change it to your desired color */
+  background: radial-gradient(#550f01 50%, rgba(255, 255, 255, 0.15) 52%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid white;
 }
 
 /*--------------------------------------------------------------

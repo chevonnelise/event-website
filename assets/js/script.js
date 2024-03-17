@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     //     document.getElementById('modal-button').style.display = 'none';
     // });
 
+
     // Show modal button when modal is hidden
     document.getElementById('staticBackdrop').addEventListener('hidden.bs.modal', function () {
         document.getElementById('modal-button').style.display = 'block';
