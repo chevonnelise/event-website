@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
-    document.getElementById("play-button").addEventListener("click", function() {
+    document.getElementById("play-button").addEventListener("click", function () {
         // Display the modal
         document.getElementById("play-button-modal").style.display = "block";
     });
-    
+
     // Close the modal when the close button is clicked
-    document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    document.getElementsByClassName("close")[0].addEventListener("click", function () {
         document.getElementById("play-button-modal").style.display = "none";
     });
-    
+
+
+
+
     // Close the modal when clicking outside of it
-    window.addEventListener("click", function(event) {
+    window.addEventListener("click", function (event) {
         if (event.target == document.getElementById("modal")) {
             document.getElementById("play-button-modal").style.display = "none";
         }
@@ -76,7 +79,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         let reversedCoordinates = [venue.geometry.coordinates[1], venue.geometry.coordinates[0]]; // Reverse coordinates
 
         const venueIcon = L.icon({
-            iconUrl: 'assets/img/map-markers/microphone-zoom.png', // Path to your custom marker image
+            iconUrl: 'assets/img/map-markers/microphone-zoom.png',
             iconSize: [40, 40], // Size of the icon
             iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
             popupAnchor: [0, -32] // Point from which the popup should open relative to the iconAnchor
@@ -262,7 +265,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 }
             });
             return response.data;
-            
+
         } catch (error) {
             console.error('Error fetching weather data:', error);
             return null;
@@ -305,20 +308,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // navContainer
     map.on('click', function (e) {
+        taxiCluster.clearLayers();
         // Create popups
         const navPopup = L.popup().setLatLng(e.latlng).setContent(navContainer);
         const weatherPopup = L.popup({
-            offset:[0,180]
+            offset: [0, 180]
         }).setLatLng(e.latlng).setContent(weatherContainer);
-    
+
         // Clear existing contents of popups
         navContainer.innerHTML = '';
         weatherContainer.innerHTML = '';
-    
+
         // Append start and destination buttons to the navContainer
         navContainer.appendChild(startBtn);
         navContainer.appendChild(destBtn);
-    
+
         // Append weather container to the weatherContainer
         fetchWeatherData(e.latlng.lat, e.latlng.lng)
             .then(weatherData => {
@@ -330,23 +334,63 @@ document.addEventListener("DOMContentLoaded", async function () {
             .catch(error => {
                 console.error('Error fetching weather data:', error);
             });
-    
+
         // Open popups on the map
         navPopup.addTo(map);
         weatherPopup.addTo(map);
-    
+
         // Event listeners for start and destination buttons
         L.DomEvent.on(startBtn, 'click', function () {
             control.spliceWaypoints(0, 1, e.latlng);
             map.closePopup();
         });
-    
+
         L.DomEvent.on(destBtn, 'click', function () {
             control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
             map.closePopup();
         });
     });
-    
+
+
+
+    let taxiCluster; 
+    let taxiVisible = false; 
+
+    document.getElementById("taxi").addEventListener("click", async function () {
+        if (taxiVisible) {
+            // If taxi markers are visible, clear them by clearing the taxiCluster layer group
+            taxiCluster.clearLayers();
+            taxiVisible = false; // Update visibility state
+        } else {
+            // If taxi markers are hidden, show them by loading and drawing the taxi markers
+            const taxiPositions = await loadTaxi();
+            if (!taxiCluster) {
+                // If taxiCluster doesn't exist, create it and add it to the map
+                taxiCluster = L.markerClusterGroup().addTo(map);
+            } else {
+                // If taxiCluster exists, clear its layers before adding new markers
+                taxiCluster.clearLayers();
+            }
+            drawTaxi(taxiPositions, taxiCluster);
+            taxiVisible = true; // Update visibility state
+        }
+    });
+
+    // redraw every 30 seconds
+    setInterval(async function () {
+        if (taxiVisible) {
+            // Only redraw taxi markers if they are visible
+            const taxiPositions = await loadTaxi();
+            if (!taxiCluster) {
+                // If taxiCluster doesn't exist, create it and add it to the map
+                taxiCluster = L.markerClusterGroup().addTo(map);
+            } else {
+                // If taxiCluster exists, clear its layers before adding new markers
+                taxiCluster.clearLayers();
+            }
+            drawTaxi(taxiPositions, taxiCluster);
+        }
+    }, 30 * 1000);
 
     // const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
     //     attribution: 'Your attribution here'
@@ -364,3 +408,24 @@ document.addEventListener("DOMContentLoaded", async function () {
     L.control.layers(baseLayers).addTo(map);
 });
 
+async function loadTaxi() {
+    // load in all the available taxi using the Taxi Availablity API
+    const response = await axios.get("https://api.data.gov.sg/v1/transport/taxi-availability");
+    return response.data.features[0].geometry.coordinates;
+}
+
+function drawTaxi(taxiPositions, taxiCluster) {
+    const taxiIcon = L.icon({
+        iconUrl: 'assets/img/map-markers/taxi.png',
+        iconSize: [32, 32], // Size of the icon
+        iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
+    });
+
+
+    for (let taxi of taxiPositions) {
+        const coordinate = [taxi[1], taxi[0]];
+        const marker = L.marker(coordinate, { icon: taxiIcon });
+
+        marker.addTo(taxiCluster);
+    }
+}
