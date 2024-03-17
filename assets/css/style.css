@@ -188,10 +188,51 @@ h1 {
   padding: 20px;
   border: 1px solid #888;
   width: 70%;
-  height:70%;
+  height:60vh;
   z-index:9000;
   align-items: center;
 }
+
+@media screen and (min-width: 767px) {
+  #play-button-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height:40vh;
+    z-index:9000;
+    align-items: center;
+  }
+} 
+
+
+@media screen and (min-width: 1024px) {
+  #play-button-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height:30vh;
+    z-index:9000;
+    align-items: center;
+  }
+} 
+
+
+@media screen and (min-width: 2560px) {
+  #play-button-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height:10vh;
+    z-index:9000;
+    align-items: center;
+  }
+} 
 
 /* Close button */
 .close {
@@ -345,14 +386,7 @@ h1 {
   width: 20px;
 }
 
-/* @media screen and (min-width: 767px) {
-  #search-container {
-    display: block;
-    min-width: 300px;
-    max-width: 300px;
-    top: 20px;
-  }
-} */
+
 
 #navContainer.container-fluid {
   align-items: center;

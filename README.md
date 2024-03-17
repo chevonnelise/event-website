@@ -1,14 +1,28 @@
 ## About This Project
-Upon entering the website, users are welcomed to learn more about singer Taylor Swift and her 2023-2024 Eras Tour.
-This website features 4 main sections:
+This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums.
+
+Comprising of 4 main sections:
+
 1. Welcome
-- Upon 
+- Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
+
 2. Event Venue
-- 
+- Marked by microphone icons on the map, yellow microphone icons indicate each unique performing Eras Tour venue. 
+As users zoom out, they can locate clusters of performing venues marked by the pink microphone icons. These are where most of the performing venues are found.
+- On the left side pane, users can search for various facilities around as well as locate the taxis available near them.
+- On the top right, users will find a navigation panel with start and end location. To populate these fields, users can click on the map and 'Start' and 'End' button. This will show the user's route from 'Start' to 'End' location as well as the weather at each location, which will give users an indicate of the temperature and whether to dress for hot/cold weather.
+- Below the top right navigation panel, user can expand the cluster button to switch between viewing the Eras Tour venues versus search results only.
+
 3. Highlights
-- 
+- This website features 3 categories of Taylor's songs: Fixed, Surprise and Unplayed.
+    - The Fixed category - classics she usually performs at every concert.
+    - The Surprise songs - these unexpected songs that vary from concert to concert and these are songs Swifties love to guess.
+    - Last but not least, songs that Swifties are still waiting for Taylor to perform fall into the Unplayed category.
+
 4. Subscribe
-- 
+- In this section, if users are keen on updates, they can submit their email to subscribe for latest updates.
+
+Scroll through and enjoy!
 
 ## Built With
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
@@ -23,7 +37,6 @@ This website features 4 main sections:
 * [![TheEvent Template by BootstrapMade][https://bootstrapmade.com/theevent-conference-event-bootstrap-template/]][TheEventTemplate-url]
 
 **Image Credits**
-
 - Website icon
 
     - [#4 Red Album Cover] [4-red-cover.png](https://en.wikipedia.org/wiki/Red_(Taylor%27s_Version)) *Image Credit: [Republic]*
