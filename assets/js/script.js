@@ -348,19 +348,19 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
     
 
-    const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
-        attribution: 'Your attribution here'
-    }).addTo(map);
+    // const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
+    //     attribution: 'Your attribution here'
+    // }).addTo(map);
 
     const baseLayers = {
         "Venue": venueClusterLayer,
         "View Search Only": searchLayer
     };
 
-    const overlayLayers = {
-        "Overlay Layer": overlayLayer
-    };
+    // const overlayLayers = {
+    //     "Overlay Layer": overlayLayer
+    // };
 
-    L.control.layers(baseLayers, overlayLayers).addTo(map);
+    L.control.layers(baseLayers).addTo(map);
 });
 

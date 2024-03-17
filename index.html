@@ -322,73 +322,69 @@
                             <div class="card-body">
                                 <h5 class="card-title">Taylor Swift</h5>
                                 <p class="card-text">Album #1</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskAlbum" class="form-control">
-                                                            <option value="#1 Taylor Swift">#1 Taylor Swift</option>
-                                                            <option value="#2 Fearless">#2 Fearless</option>
-                                                            <option value="#3 Speak Now">#3 Speak Now</option>
-                                                            <option value="#4 Red">#4 Red</option>
-                                                            <option value="#5 1989">#5 1989</option>
-                                                            <option value="#6 Reputation">#6 Reputation</option>
-                                                            <option value="#7 Lover">#7 Lover</option>
-                                                            <option value="#8 Folklore">#8 Folklore</option>
-                                                            <option value="#9 Evermore">#9 Evermore</option>
-                                                            <option value="#10 Midnights">#10 Midnights</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
+                                <!-- Accordion -->
+                                <div class="accordion" id="accordion1">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne"
+                                                style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                                Fixed Songs
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>None for now</strong>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo"
+                                                style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                                Surprise
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>Teardrops On My Guitar</strong><br>
+                                                <iframe width="180" height="180"
+                                                    src="https://www.youtube.com/embed/rs0FzT9ezY0?si=EpFzvXb4XEO9SOwj"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowfullscreen></iframe>
+                                                <br>
+                                                <strong>The Outside</strong><br>
+                                                <iframe width="180" height="180"
+                                                    src="https://www.youtube.com/embed/lyYOdNbAe3o?si=nkxFSoGVoJ-GOgU3"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree"
+                                                style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                                Unplayed
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>Tim McGraw</strong><br>
+                                                <strong>Picture To Burn</strong><br>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -400,61 +396,66 @@
                             <div class="card-body">
                                 <h5 class="card-title">Fearless</h5>
                                 <p class="card-text">Album #2</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Come In With The Rain</strong><br>
+                                            <iframe width="180" height="180"
+                                                src="https://www.youtube.com/embed/SC-8xbi0nRI?si=3bkt_yOqZRvcVBuK"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen></iframe>
+                                            <br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Fearless</strong><br>
+                                            <strong>Love Story</strong><br>
+                                            <strong>You Belong With Me</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Fifteen</strong><br>
+                                            <strong>Hey Stephen</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -465,60 +466,60 @@
                             <div class="card-body">
                                 <h5 class="card-title">Speak Now</h5>
                                 <p class="card-text">Album #3</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Enchanted</strong><br>
+                                            <strong>Long Live</strong><br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Superman</strong>
+                                            <iframe width="180" height="180" src="https://www.youtube.com/embed/6KVKhmtbZ1U?si=YaSrCQKGyqKxZXvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Mine</strong><br>
+                                            <strong>Sparks Fly</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -528,61 +529,60 @@
                             <div class="card-body">
                                 <h5 class="card-title">Red</h5>
                                 <p class="card-text">Album #4</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>I Knew You Were Trouble</strong><br>
+                                            <strong>All Too Well</strong>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Red</strong><br>
+                                            <iframe width="180" height="180" src="https://www.youtube.com/embed/ClNkylM-fbk?si=wj6lfzctqbfsbz5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>State Of Grace</strong><br>
+                                            <strong>Treacherous</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -592,60 +592,62 @@
                             <div class="card-body">
                                 <h5 class="card-title">1989</h5>
                                 <p class="card-text">Album #5</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>State Of Grace</strong><br>
+                                            <strong>Style</strong><br>
+                                            <strong>Shake It Off</strong><br>
+                                            <strong>Bad Blood</strong><br>
+                                            <strong>Wildest Dreams</strong><br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>How You Get The Girl</strong><br>
+                                            <iframe width="180" height="180" src="https://www.youtube.com/embed/fqacLQ5ZqOQ?si=l0TAY_dqMzb5uW4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Welcome To New York</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -659,60 +661,58 @@
                             <div class="card-body">
                                 <h5 class="card-title">Reputation</h5>
                                 <p class="card-text">Album #6</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Ready For It?</strong>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Getaway Car</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>End Game</strong><br>
+                                            <strong>I Did Something Bad</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -722,60 +722,60 @@
                             <div class="card-body">
                                 <h5 class="card-title">Lover</h5>
                                 <p class="card-text">Album #7</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Cruel Summer</strong><br>
+                                            <strong>Lover</strong><br>
+                                            <strong>The Man</strong><br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Death By A Thousand Cuts</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>I Forgot That You Existed</strong><br>
+                                            <strong>I Think He Knows</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -786,60 +786,60 @@
                             <div class="card-body">
                                 <h5 class="card-title">Folklore</h5>
                                 <p class="card-text">Album #8</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>The 1</strong><br>
+                                            <strong>Cardigan</strong><br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This Is Me Trying</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Exile</strong><br>
+                                            <strong>Mirrorball</strong><br>
+                                            <strong>Seven</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -850,60 +850,58 @@
                             <div class="card-body">
                                 <h5 class="card-title">Evermore</h5>
                                 <p class="card-text">Album #9</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Willow</strong><br>
+                                            <strong>Champagne Problems</strong><br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>None for now</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>This is the third item's accordion body.</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -914,60 +912,60 @@
                             <div class="card-body">
                                 <h5 class="card-title">Midnights</h5>
                                 <p class="card-text">Album #10</p>
-                                <!-- Modal -->
-
-                                <div id="popup">
-                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
-                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> -->
-                                    <!-- Button trigger modal -->
-                                    <button id="addSong2" type="button" class="btn btn-primary mb-3"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Song Checklist
-                                    </button>
-
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
-                                                    </h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="mb-3">
-                                                        <!-- <form id="todo-form"> -->
-                                                        <input type="text" id="taskName" class="form-control"
-                                                            placeholder="Song Title">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <select id="taskStatus" class="form-control">
-                                                            <option value="Surprise">Surprise</option>
-                                                            <option value="Fixed">Fixed</option>
-                                                            <option value="Unplayed">Unplayed</option>
-                                                        </select>
-                                                    </div>
-                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
-                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                                    <!-- </form> -->
-                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
-
-                                                    <ul id="todoList" class="list-group">
-                                                        <!-- Todo items will be appended here -->
-                                                    </ul>
-
-                                                </div>
-
-
-                                            </div>
+                                <!-- Accordion -->
+                            <div class="accordion" id="accordion1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                            style="background-color: rgb(255, 197, 139); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Fixed Songs
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Lavender Haze</strong><br>
+                                            <strong>Anti-Hero</strong><br>
                                         </div>
                                     </div>
-                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
-                                    <!-- </form> -->
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo"
+                                            style="background-color: rgb(253, 221, 127); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Surprise
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>You're On Your Own, Kid</strong><br>
+                                            <strong>Dear Reader</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree"
+                                            style="background-color: rgb(249, 242, 151); color: rgb(167, 76, 2); font-weight: 600; font-size: 16px; padding: 10px;">
+                                            Unplayed
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Maroon</strong><br>
+                                            <strong>Snow On The Beach</strong><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
