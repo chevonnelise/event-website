@@ -109,9 +109,19 @@
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
             <h5 class="mb-4 pb-0">Welcome <span>Swiftie</span></h5>
             <p class="mb-4 pb-0">Taylor Swift : The Eras Tour</p>
-            <a href="#highlights" class="play-button">
+            <a href="#highlights" id="play-button" class="play-button">
                 <span class="play-icon"></span>
             </a>
+            <div id="play-button-modal" class="modal">
+                <div class="modal-content">
+                  <!-- Your content goes here -->
+                  <span class="close">&times;</span>
+                  <a href="#highlights"></a>
+                  <h1>Missed the tour?</h1>
+                  <br>
+                  <h3>Click on each album to play videos from the tour</h3>
+                </div>
+              </div>
             <!-- <a href="#about" class="about-btn scrollto">About The Event</a> -->
           </div>
     </section><!-- End Welcome Section -->
@@ -157,9 +167,8 @@
                                     <!-- Button trigger modal -->
                                     <button id="modal-button" type="button" class="btn btn-light" data-bs-toggle="modal"
                                         data-bs-target="#staticBackdrop">
-                                        <svg width="22" height="22" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.85453 14.2228C4.76724 12.7425 4.125 10.915 4.125 8.9375C4.125 4.00146 8.12645 0 13.0625 0C17.9985 0 22 4.00146 22 8.9375C22 13.8735 17.9985 17.875 13.0625 17.875C11.0844 17.875 9.25648 17.2324 7.77596 16.1446L7.77715 16.1455C7.7366 16.2005 7.69144 16.2531 7.64166 16.3029L2.34727 21.5973C1.8103 22.1342 0.939695 22.1342 0.402725 21.5973C-0.134246 21.0603 -0.134246 20.1897 0.402725 19.6527L5.69711 14.3583C5.74689 14.3086 5.79954 14.2634 5.85453 14.2228ZM5.5 8.9375C5.5 13.1142 8.88585 16.5 13.0625 16.5C17.2392 16.5 20.625 13.1142 20.625 8.9375C20.625 4.76085 17.2392 1.375 13.0625 1.375C8.88585 1.375 5.5 4.76085 5.5 8.9375Z" fill="black"/>
-                                            </svg>                                          
+                                        <img src="assets/img/side-pane/search.png" alt="search.png"
+                        title="search.png">                                     
                                     </button>
                                 </a>
                             </li>
@@ -266,6 +275,659 @@
             <div class="section-header">
                 <h2>Highlights</h2>
                 <p>Discover which songs are played</p>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/1-taylor-swift-cover.png" class="taylor-swift-album" alt="taylor-swift-album" />
+                            <div class="card-body">
+                                <h5 class="card-title">Taylor Swift</h5>
+                                <p class="card-text">Album #1</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskAlbum" class="form-control">
+                                                            <option value="#1 Taylor Swift">#1 Taylor Swift</option>
+                                                            <option value="#2 Fearless">#2 Fearless</option>
+                                                            <option value="#3 Speak Now">#3 Speak Now</option>
+                                                            <option value="#4 Red">#4 Red</option>
+                                                            <option value="#5 1989">#5 1989</option>
+                                                            <option value="#6 Reputation">#6 Reputation</option>
+                                                            <option value="#7 Lover">#7 Lover</option>
+                                                            <option value="#8 Folklore">#8 Folklore</option>
+                                                            <option value="#9 Evermore">#9 Evermore</option>
+                                                            <option value="#10 Midnights">#10 Midnights</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/2-fearless-cover.png" class="fearless-album" alt="fearless-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Fearless</h5>
+                                <p class="card-text">Album #2</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/3-speak-now-cover.png" class="speak-now-album" alt="speak-now-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Speak Now</h5>
+                                <p class="card-text">Album #3</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/4-red-cover.png" class="red-album" alt="red-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Red</h5>
+                                <p class="card-text">Album #4</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/5-1989-cover.png" class="1989-album" alt="1989-album">
+                            <div class="card-body">
+                                <h5 class="card-title">1989</h5>
+                                <p class="card-text">Album #5</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+    
+                    <!-- <div class="row"> -->
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/6-reputation-cover.png" class="reputation-album" alt="reputation-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Reputation</h5>
+                                <p class="card-text">Album #6</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/7-lover-cover.png" class="lover-album" alt="lover-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Lover</h5>
+                                <p class="card-text">Album #7</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/8-folklore-cover.png" class="folklore-album" alt="folklore-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Folklore</h5>
+                                <p class="card-text">Album #8</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/9-evermore-cover.png" class="evermore-album" alt="evermore-album" />
+                            <div class="card-body">
+                                <h5 class="card-title">Evermore</h5>
+                                <p class="card-text">Album #9</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="card album-card">
+                            <img src="assets/img/card-images/10-midnights-cover.png" class="midnights-album" alt="midnights-album">
+                            <div class="card-body">
+                                <h5 class="card-title">Midnights</h5>
+                                <p class="card-text">Album #10</p>
+                                <!-- Modal -->
+    
+                                <div id="popup">
+                                    <!-- <h1 class="text-center">Song Checklist</h1> -->
+                                    <!-- <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button> --> 
+                                    <!-- Button trigger modal -->
+                                    <button id="addSong2" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        Song Checklist
+                                    </button>
+    
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Song Checklist
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+    
+                                                    <div class="mb-3">
+                                                        <!-- <form id="todo-form"> -->
+                                                        <input type="text" id="taskName" class="form-control"
+                                                            placeholder="Song Title">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <select id="taskStatus" class="form-control">
+                                                            <option value="Surprise">Surprise</option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Unplayed">Unplayed</option>
+                                                        </select>
+                                                    </div>
+                                                    <button id="addTodo" class="btn btn-primary mb-3">Add Song</button>
+                                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                                    <!-- </form> -->
+                                                    <button id="save-btn" class="btn btn-success mb-3">Save</button>
+    
+                                                    <ul id="todoList" class="list-group">
+                                                        <!-- Todo items will be appended here -->
+                                                    </ul>
+    
+                                                </div>
+    
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="submit" id="addTodo" class="btn btn-primary mb-3" value="Add To Do"/> -->
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section><!-- End Highlights Section -->
