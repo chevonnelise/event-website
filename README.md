@@ -7,22 +7,30 @@
 
 **Colours**
 * Using a mixture of various shades of yellow, brown, black and pink, the colour scheme is meant to embody the excitement that concert goers feel when attending concerts. 
-* Red & Orange: Reflecting the fiery energy of a live performance, orange injects warmth and excitement into the color palette, capturing the adrenaline rush and enthusiasm of concert attendees. 
-* Dynamic Yellow: Yellow symbolizes positivity and joy, perfectly capturing the euphoria and high spirits that accompany the live music experience.
-* Pink: A bold and attention-grabbing hue, neon pink adds a playful and vibrant touch to the color scheme, symbolizing the lively and exhilarating experience of live music.
+* Red & Orange: Reflecting the energy of a live performance, these colours symbolise the excitement, adrenaline rush and enthusiasm of concert goers. 
+* Yellow: A colour often associated with positivity and joy, this colour represents the euphoria that concert goers experience during the live performances.
+* Pink: A bold colour, pink adds a playful and vibrant touch, also embodying the lively atmosphere of concerts.
 
 Users can navigate the 4 main sections via the navbar:
 **Mobile**
-![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)
+
+![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)&nbsp;
+![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-function.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-result.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-user-route-taxi-weather)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-venue-markers.png)&nbsp;
 
 **Laptop** 
-![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)
-
+![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)&nbsp;
+![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-function.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-result.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)&nbsp;
 
 1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
-* ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
-* ![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)
 
 2. **Event Venue**
 - Marked by microphone icons on the map, yellow microphone icons indicate each unique performing Eras Tour venue. 
@@ -31,19 +39,10 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 - On the left side pane, there are 3 icons: 
    * Taylor Swift silouhette icon , which is aligned with the website icon;
    * Search icon where users can click to search for various facilities around; 
-   * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-function.png)
-   * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-result.png)
-
-   * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-function.png)
-   * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-result.png)
-
    * Taxi icon where users can click to locate the taxis available near them, a 'Start' and 'End' button will appear so that users can plot their journey from start to destined location. This will populate the navigation fields on the top right of the map. On each click on the map, the user will be able to identify the temperature and whether to dress for hot/cold weather.
-   * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-user-route-taxi-weather)
-   * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)
    
 - Below the top right navigation panel, user can expand the cluster button to toggle between viewing the Eras Tour venues versus search results only.
-    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-venue-markers.png)
-    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)
+
 
 3. **Highlights**
 - This website features 3 categories of Taylor's songs: Fixed, Surprise and Unplayed.
