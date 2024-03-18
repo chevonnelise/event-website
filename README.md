@@ -28,6 +28,12 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 - On the left side pane, there are 3 icons: 
    * Taylor Swift silouhette icon , which is aligned with the website icon;
    * Search icon where users can click to search for various facilities around; 
+   * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-function.png)
+   * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-result.png)
+
+   * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-function.png)
+   * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-result.png)
+
    * Taxi icon where users can click to locate the taxis available near them, a 'Start' and 'End' button will appear so that users can plot their journey from start to destined location. This will populate the navigation fields on the top right of the map. On each click on the map, the user will be able to identify the temperature and whether to dress for hot/cold weather.
    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-user-route-taxi-weather)
    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)
@@ -41,9 +47,18 @@ As users zoom out, they can locate clusters of performing venues marked by the p
     * The Fixed category - classics she usually performs at every concert.
     * The Surprise songs - these unexpected songs that vary from concert to concert and these are songs Swifties love to guess.
     * Last but not least, songs that Swifties are still waiting for Taylor to perform fall into the Unplayed category.
+    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights.png)
+    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs.png)
+    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs-videos.png)
+
+    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights.png)
+    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs.png)
+    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs-videos.png)
 
 4. **Subscribe**
 - In this section, if users are keen on updates, they can submit their email to subscribe for latest updates.
+    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/5.%20mobile-subscribe.png)
+    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/5.%20laptop-subscribe.png)
 
 Scroll through and enjoy!
 
@@ -55,6 +70,8 @@ Scroll through and enjoy!
 * [LeafletJS](https://leafletjs.com/) 
 * [Google Fonts](https://fonts.googleapis.com)
 * [Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/)
+* [FourSquare API](https://foursquare.com/developers/home)
+* [Open Meteo API](https://open-meteo.com/)
 
 ## Screenshots
 **Welcome Page**
