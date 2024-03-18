@@ -32,7 +32,7 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 Scroll through and enjoy!
 
 ## Screenshots of Web Application
-**Mobile**&nbsp;
+**Mobile**\
 ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)&nbsp;
 ![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)&nbsp;
 ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-venue-markers.png)&nbsp;
@@ -45,7 +45,7 @@ Scroll through and enjoy!
 ![Subscribe - Mobile](assets/img/screen-shots/mobile/5.%20mobile-subscribe.png)&nbsp;
    
     
-**Laptop** 
+**Laptop**\
 ![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)&nbsp;
 ![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)&nbsp;
 ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)&nbsp;
