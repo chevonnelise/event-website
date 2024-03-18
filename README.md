@@ -1,5 +1,5 @@
 ## About This Project
-This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums.
+This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs.
 
 Comprising of 4 main sections:
 
@@ -9,15 +9,19 @@ Comprising of 4 main sections:
 2. Event Venue
 - Marked by microphone icons on the map, yellow microphone icons indicate each unique performing Eras Tour venue. 
 As users zoom out, they can locate clusters of performing venues marked by the pink microphone icons. These are where most of the performing venues are found.
-- On the left side pane, users can search for various facilities around as well as locate the taxis available near them.
-- On the top right, users will find a navigation panel with start and end location. To populate these fields, users can click on the map and 'Start' and 'End' button. This will show the user's route from 'Start' to 'End' location as well as the weather at each location, which will give users an indicate of the temperature and whether to dress for hot/cold weather.
-- Below the top right navigation panel, user can expand the cluster button to switch between viewing the Eras Tour venues versus search results only.
+
+- On the left side pane, there are 3 icons: 
+   * Taylor Swift silouhette icon , which is aligned with the website icon;
+   * Search icon where users can click to search for various facilities around; 
+   * Taxi icon where users can click to locate the taxis available near them, a 'Start' and 'End' button will appear so that users can plot their journey from start to destined location. This will populate the navigation fields on the top right of the map. On each click on the map, the user will be able to identify the temperature and whether to dress for hot/cold weather.
+
+- Below the top right navigation panel, user can expand the cluster button to toggle between viewing the Eras Tour venues versus search results only.
 
 3. Highlights
 - This website features 3 categories of Taylor's songs: Fixed, Surprise and Unplayed.
-    - The Fixed category - classics she usually performs at every concert.
-    - The Surprise songs - these unexpected songs that vary from concert to concert and these are songs Swifties love to guess.
-    - Last but not least, songs that Swifties are still waiting for Taylor to perform fall into the Unplayed category.
+    * The Fixed category - classics she usually performs at every concert.
+    * The Surprise songs - these unexpected songs that vary from concert to concert and these are songs Swifties love to guess.
+    * Last but not least, songs that Swifties are still waiting for Taylor to perform fall into the Unplayed category.
 
 4. Subscribe
 - In this section, if users are keen on updates, they can submit their email to subscribe for latest updates.
@@ -25,7 +29,8 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 Scroll through and enjoy!
 
 ## Built With
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+*
+* [![Bootstrap][Bootstrap.com]][(https://getbootstrap.com)]
 * [![LeafletJS][https://leafletjs.com/]][Leaflet-url]
 * [![Google Fonts][https://fonts.googleapis.com]][Google-url]
 * [![Leaflet Routing Machine][https://www.liedman.net/leaflet-routing-machine/]][LeafletRoutingMachine-url]
