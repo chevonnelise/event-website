@@ -12,14 +12,17 @@
 * Pink: A bold and attention-grabbing hue, neon pink adds a playful and vibrant touch to the color scheme, symbolizing the lively and exhilarating experience of live music.
 
 Users can navigate the 4 main sections via the navbar:
-* ![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)
-* ![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)
+**Mobile**
+![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)
+
+**Laptop** 
+![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)
 
 
 1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
 * ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
-* ![Welcome Page - Laptop](assets/img/screen-shots/mobile/1.%20laptop-welcome.png)
+* ![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)
 
 2. **Event Venue**
 - Marked by microphone icons on the map, yellow microphone icons indicate each unique performing Eras Tour venue. 
