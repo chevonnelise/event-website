@@ -1,6 +1,6 @@
 ## About This Project
 **User Problems & Pain Points**
-This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs, especially those who miss her performances.
+* This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs, especially those who miss her performances or want to relive her live performances.
 
 **Theme**
 * Concert theme as shown by the concert hero image, microphone icons, and video of live performances.
@@ -71,13 +71,7 @@ Scroll through and enjoy!
 * [Google Fonts](https://fonts.googleapis.com)
 * [Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/)
 * [FourSquare API](https://foursquare.com/developers/home)
-* [Open Meteo API](https://open-meteo.com/)
-
-## Screenshots
-**Welcome Page**
-* ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
-* ![Welcome Page - Laptop](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
-
+* [Open Meteo Weather API](https://open-meteo.com/)
 
 
 
