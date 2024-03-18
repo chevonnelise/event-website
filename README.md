@@ -19,7 +19,7 @@ Users can navigate the 4 main sections via the navbar:
 1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
 * ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
-* ![Welcome Page - Laptop](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
+* ![Welcome Page - Laptop](assets/img/screen-shots/mobile/1.%20laptop-welcome.png)
 
 2. **Event Venue**
 - Marked by microphone icons on the map, yellow microphone icons indicate each unique performing Eras Tour venue. 
@@ -29,8 +29,12 @@ As users zoom out, they can locate clusters of performing venues marked by the p
    * Taylor Swift silouhette icon , which is aligned with the website icon;
    * Search icon where users can click to search for various facilities around; 
    * Taxi icon where users can click to locate the taxis available near them, a 'Start' and 'End' button will appear so that users can plot their journey from start to destined location. This will populate the navigation fields on the top right of the map. On each click on the map, the user will be able to identify the temperature and whether to dress for hot/cold weather.
-
+   * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-user-route-taxi-weather)
+   * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)
+   
 - Below the top right navigation panel, user can expand the cluster button to toggle between viewing the Eras Tour venues versus search results only.
+    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-venue-markers.png)
+    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)
 
 3. **Highlights**
 - This website features 3 categories of Taylor's songs: Fixed, Surprise and Unplayed.
