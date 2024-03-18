@@ -251,8 +251,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     });
 
-    //2. Weather 
-    // Function to fetch weather data for a specific location (Open Meteo API)
+    
     // 2. Weather 
     // Function to fetch weather data for a specific location (Open Meteo API)
     async function fetchWeatherData(latitude, longitude) {
@@ -432,3 +431,5 @@ function drawTaxi(taxiPositions, taxiCluster) {
         marker.addTo(taxiCluster);
     }
 }
+
+
