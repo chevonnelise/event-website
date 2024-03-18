@@ -12,22 +12,6 @@
 * Pink: A bold colour, pink adds a playful and vibrant touch, also embodying the lively atmosphere of concerts.
 
 Users can navigate the 4 main sections via the navbar:
-**Mobile**
-
-![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)&nbsp;
-![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-function.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-result.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-user-route-taxi-weather)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-venue-markers.png)&nbsp;
-
-**Laptop** 
-![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)&nbsp;
-![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-function.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-result.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)&nbsp;
 
 1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
@@ -49,20 +33,37 @@ As users zoom out, they can locate clusters of performing venues marked by the p
     * The Fixed category - classics she usually performs at every concert.
     * The Surprise songs - these unexpected songs that vary from concert to concert and these are songs Swifties love to guess.
     * Last but not least, songs that Swifties are still waiting for Taylor to perform fall into the Unplayed category.
-    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights.png)
-    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs.png)
-    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs-videos.png)
-
-    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights.png)
-    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs.png)
-    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs-videos.png)
 
 4. **Subscribe**
 - In this section, if users are keen on updates, they can submit their email to subscribe for latest updates.
-    * ![Event Venue - Mobile](assets/img/screen-shots/mobile/5.%20mobile-subscribe.png)
-    * ![Event Venue - Laptop](assets/img/screen-shots/laptop/5.%20laptop-subscribe.png)
-
+    
 Scroll through and enjoy!
+
+## Screenshots of Web Application
+**Mobile**
+![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)&nbsp;
+![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-function.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-result.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-user-route-taxi-weather.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.mobile-event-venue-venue-markers.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs-videos.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/5.%20mobile-subscribe.png)&nbsp;
+   
+    
+**Laptop** 
+![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)&nbsp;
+![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-function.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-result.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs-videos.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/5.%20laptop-subscribe.png)&nbsp;
 
 ## Built With
 * HTML
@@ -74,12 +75,10 @@ Scroll through and enjoy!
 * [Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/)
 * [FourSquare API](https://foursquare.com/developers/home)
 * [Open Meteo Weather API](https://open-meteo.com/)
-
-
+* [GeoJSON.io](https://geojson.io/)
 
 
 ## Acknowledgements
-
 **Template Inspiration**
 * [![TheEvent Template by BootstrapMade][https://bootstrapmade.com/theevent-conference-event-bootstrap-template/]][TheEventTemplate-url]
 
