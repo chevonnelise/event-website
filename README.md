@@ -1,12 +1,27 @@
 ## About This Project
-This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs.
+**User Problems & Pain Points**
+This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs, especially those who miss her performances.
 
-Comprising of 4 main sections:
+**Theme**
+* Concert theme as shown by the concert hero image, microphone icons, and video of live performances.
 
-1. Welcome
+**Colours**
+* Using a mixture of various shades of yellow, brown, black and pink, the colour scheme is meant to embody the excitement that concert goers feel when attending concerts. 
+* Red & Orange: Reflecting the fiery energy of a live performance, orange injects warmth and excitement into the color palette, capturing the adrenaline rush and enthusiasm of concert attendees. 
+* Dynamic Yellow: Yellow symbolizes positivity and joy, perfectly capturing the euphoria and high spirits that accompany the live music experience.
+* Pink: A bold and attention-grabbing hue, neon pink adds a playful and vibrant touch to the color scheme, symbolizing the lively and exhilarating experience of live music.
+
+Users can navigate the 4 main sections via the navbar:
+* ![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)
+* ![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)
+
+
+1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
+* ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
+* ![Welcome Page - Laptop](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
 
-2. Event Venue
+2. **Event Venue**
 - Marked by microphone icons on the map, yellow microphone icons indicate each unique performing Eras Tour venue. 
 As users zoom out, they can locate clusters of performing venues marked by the pink microphone icons. These are where most of the performing venues are found.
 
@@ -17,23 +32,33 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 
 - Below the top right navigation panel, user can expand the cluster button to toggle between viewing the Eras Tour venues versus search results only.
 
-3. Highlights
+3. **Highlights**
 - This website features 3 categories of Taylor's songs: Fixed, Surprise and Unplayed.
     * The Fixed category - classics she usually performs at every concert.
     * The Surprise songs - these unexpected songs that vary from concert to concert and these are songs Swifties love to guess.
     * Last but not least, songs that Swifties are still waiting for Taylor to perform fall into the Unplayed category.
 
-4. Subscribe
+4. **Subscribe**
 - In this section, if users are keen on updates, they can submit their email to subscribe for latest updates.
 
 Scroll through and enjoy!
 
 ## Built With
-*
-* [![Bootstrap][Bootstrap.com]][(https://getbootstrap.com)]
-* [![LeafletJS][https://leafletjs.com/]][Leaflet-url]
-* [![Google Fonts][https://fonts.googleapis.com]][Google-url]
-* [![Leaflet Routing Machine][https://www.liedman.net/leaflet-routing-machine/]][LeafletRoutingMachine-url]
+* HTML
+* CSS
+* Javascript
+* [Bootstrap](https://getbootstrap.com)
+* [LeafletJS](https://leafletjs.com/) 
+* [Google Fonts](https://fonts.googleapis.com)
+* [Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/)
+
+## Screenshots
+**Welcome Page**
+* ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
+* ![Welcome Page - Laptop](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)
+
+
+
 
 
 ## Acknowledgements
@@ -59,13 +84,11 @@ Scroll through and enjoy!
 
 
 **Background Images**
-
 - Hero Image
 
     - [People at Concert] [hero-bg.jpg](https://www.pexels.com/photo/people-at-concert-1105666/) *Image Credit: [Vishnu R Nair]*
 
 **Card Images**
-
 - Album Covers
 
     - [#1 Taylor Swift][1-taylor-swift-cover.png](https://en.wikipedia.org/wiki/Taylor_Swift_(album)) *Image Credit: [Big Machine]*
