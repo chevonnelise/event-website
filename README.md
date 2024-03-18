@@ -3,7 +3,7 @@
 * This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs, especially those who miss her performances or want to relive her live performances.
 
 ## Features
-**How do users navigate this web application**&nbsp;
+**How do users navigate this web application**\
 Users can navigate the <u>4 main sections</u> via the navbar:
 1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
@@ -77,17 +77,20 @@ Scroll through and enjoy!
 * [FourSquare API](https://foursquare.com/developers/home)
 * [Open Meteo Weather API](https://open-meteo.com/)
 * [GeoJSON.io](https://geojson.io/)
+* [Flaticons](https://www.flaticon.com/)
+
 
 
 ## Acknowledgements
 **Template Inspiration**
-* ![TheEvent Template by BootstrapMade](https://bootstrapmade.com/theevent-conference-event-bootstrap-template/)
+* [TheEvent Template by BootstrapMade](https://bootstrapmade.com/theevent-conference-event-bootstrap-template/)
 
 **Image Credits**
 - Website icon
 
-    - [#4 Red Album Cover] [4-red-cover.png](https://en.wikipedia.org/wiki/Red_(Taylor%27s_Version)) *Image Credit: [Republic]*
-
+    - [Taylor Swift Silouhette] [ts-silouhette.png](https://www.pngitem.com/middle/Jwixmm_transparent-tumblr-clipart-black-and-white-taylor-swift/) *Image Credit: [Ching Yu]*
+    - [Taylor Swift Logo] [taylor-swift-logo.png](https://en.wikipedia.org/wiki/Red_(Taylor%27s_Version)) *Image Credit: [Wikipedia]*
+    
 
 - Map Markers
 
@@ -98,6 +101,8 @@ Scroll through and enjoy!
     - [Microphone for 1 venue] [microphone-zoom.png](https://www.flaticon.com/free-icons/microphone) *Image Credit: [Freepik]*
 
     - [Magnifying Glass for searched locations] [magnifying-glass.png](https://www.flaticon.com/free-icons/magnifying-glass) *Image Credit: [Freepik]*
+
+    - [User for user route] [user.png](https://www.flaticon.com/free-icons/personal) *Image Credit: [Roundicons]*
 
 
 **Background Images**
