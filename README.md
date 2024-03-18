@@ -3,8 +3,8 @@
 * This website features singer Taylor Swift, her 2023-2024 Eras Tour and her 10 albums. Hence, the primary users would be Swifties who are keen to learn more about the Eras Tour performance venues and songs, especially those who miss her performances or want to relive her live performances.
 
 ## Features
-**How do users navigate this web application**
-Users can navigate the 4 main sections via the navbar:
+**How do users navigate this web application**&nbsp;
+Users can navigate the <u>4 main sections</u> via the navbar:
 1. **Welcome**
 - Upon entering the website, users are welcomed by a hero image that shows a concert scene - this sets the tone for the concert theme. Upon clicking the play button, users are brought to section #3 'highlights' where they can find songs of Taylor's various Eras across her 10 albums.
 
@@ -15,7 +15,7 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 - On the left side pane, there are 3 icons: 
    * Taylor Swift silouhette icon , which is aligned with the website icon;
    * Search icon where users can click to search for various facilities around; 
-   * Taxi icon where users can click to locate the taxis available near them, a 'Start' and 'End' button will appear so that users can plot their journey from start to destined location. This will populate the navigation fields on the top right of the map. On each click on the map, the user will be able to identify the temperature and whether to dress for hot/cold weather.
+   * Taxi icon where users can click to locate the taxis available near them, a 'Start' and 'End' button will appear so that users can plot their journey from start to destined location. This will populate the navigation fields on the top right of the map. With each click on the map, the user will be able to identify the temperature and whether to dress for hot/cold weather.
    
 - Below the top right navigation panel, user can expand the cluster button to toggle between viewing the Eras Tour venues versus search results only.
 
@@ -35,27 +35,27 @@ Scroll through and enjoy!
 **Mobile**&nbsp;
 ![Welcome Page - Mobile](assets/img/screen-shots/mobile/1.%20mobile-welcome.png)&nbsp;
 ![Navbar - mobile](assets/img/screen-shots/mobile/2.%20mobile-navbar.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-venue-markers.png)&nbsp;
+![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-user-route-taxi-weather.png)&nbsp;
 ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-function.png)&nbsp;
 ![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-search-location-result.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-user-route-taxi-weather.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/3.%20mobile-event-venue-venue-markers.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs-videos.png)&nbsp;
-![Event Venue - Mobile](assets/img/screen-shots/mobile/5.%20mobile-subscribe.png)&nbsp;
+![Highlights - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights.png)&nbsp;
+![Highlights - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs.png)&nbsp;
+![Highlights - Mobile](assets/img/screen-shots/mobile/4.%20mobile-highlights-songs-videos.png)&nbsp;
+![Subscribe - Mobile](assets/img/screen-shots/mobile/5.%20mobile-subscribe.png)&nbsp;
    
     
 **Laptop** 
 ![Welcome Page - Laptop](assets/img/screen-shots/laptop/1.%20laptop-welcome.png)&nbsp;
 ![Navbar - laptop](assets/img/screen-shots/laptop/2.%20laptop-navbar.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)&nbsp;
+![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)&nbsp;
 ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-function.png)&nbsp;
 ![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-search-location-result.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-user-route-taxi-weather.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/3.%20laptop-event-venue-venue-markers.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs-videos.png)&nbsp;
-![Event Venue - Laptop](assets/img/screen-shots/laptop/5.%20laptop-subscribe.png)&nbsp;
+![Highlights - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights.png)&nbsp;
+![Highlights - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs.png)&nbsp;
+![Highlights - Laptop](assets/img/screen-shots/laptop/4.%20laptop-highlights-songs-videos.png)&nbsp;
+![Subscribe - Laptop](assets/img/screen-shots/laptop/5.%20laptop-subscribe.png)&nbsp;
 
 **Theme**
 * Concert theme as shown by the concert hero image, microphone icons, and videos of live performances.
@@ -81,7 +81,7 @@ Scroll through and enjoy!
 
 ## Acknowledgements
 **Template Inspiration**
-* ![TheEvent Template by BootstrapMade][https://bootstrapmade.com/theevent-conference-event-bootstrap-template/]
+* ![TheEvent Template by BootstrapMade](https://bootstrapmade.com/theevent-conference-event-bootstrap-template/)
 
 **Image Credits**
 - Website icon
