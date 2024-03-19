@@ -72,6 +72,7 @@ Scroll through and enjoy!
 * Javascript
 * [Bootstrap](https://getbootstrap.com)
 * [LeafletJS](https://leafletjs.com/) 
+* [ESRI Map](https://www.arcgis.com/home/item.html?id=974d45be315c4c87b2ac32be59af9a0b) 
 * [Google Fonts](https://fonts.googleapis.com)
 * [Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/)
 * [FourSquare API](https://foursquare.com/developers/home)
@@ -105,6 +106,7 @@ Scroll through and enjoy!
 
     - [User for user route] [user.png](https://www.flaticon.com/free-icons/personal) *Image Credit: [Roundicons]*
 
+    - [Taxi for available taxis] [taxi.png & taxi-color.png](https://www.flaticon.com/free-icons/taxi) *Image Credit: [tulpahn]*
 
 **Background Images**
 - Hero Image

@@ -1,66 +1,22 @@
 
 document.addEventListener("DOMContentLoaded", async function () {
 
+    // ----------------------------------------------------- Section 1: Welcome ----------------------------------------------//
+    // Play button
     document.getElementById("play-button").addEventListener("click", function () {
-        // Display the modal
+        // Display the play button modal
         document.getElementById("play-button-modal").style.display = "block";
     });
 
-    document.getElementById("subscribe-btn").addEventListener("click", function () {
-        Swal.fire({
-            title: "Welcome to the team",
-            text: "Stay tuned for more updates!",
-            icon: "success"
-          });
-    });
-
-    
-
-    // Close the modal when the close button is clicked
+    // Close the play button modal when the close button is clicked
     document.getElementsByClassName("close")[0].addEventListener("click", function () {
         document.getElementById("play-button-modal").style.display = "none";
     });
+    // ------------------------------------------------- End of Section 1: Welcome ------------------------------------------//
 
 
-    // Close the modal when clicking outside of it
-    window.addEventListener("click", function (event) {
-        if (event.target == document.getElementById("modal")) {
-            document.getElementById("play-button-modal").style.display = "none";
-        }
-    });
-
-    // Get the side pane element
-    const sidePane = document.getElementById('side-pane');
-
-    // Get the top offset of the content section where you want the side pane to hide
-    const hideOffset = document.getElementById('venue').offsetTop;
-
-    // Add event listener to window scroll event
-    window.addEventListener('scroll', function () {
-        // Check if the scroll position is past the hideOffset
-        if (window.scrollY >= hideOffset) {
-            // Hide the side pane
-            sidePane.style.display = 'none';
-        } else {
-            // Show the side pane
-            sidePane.style.display = 'block';
-        }
-    });
-
-    // modal button
-    // Hide modal button when modal is shown
-    // document.getElementById('staticBackdrop').addEventListener('shown.bs.modal', function () {
-    //     document.getElementById('modal-button').style.display = 'none';
-    // });
-
-
-    // Show modal button when modal is hidden
-    document.getElementById('staticBackdrop').addEventListener('hidden.bs.modal', function () {
-        document.getElementById('modal-button').style.display = 'block';
-    });
-
-
-    // setup the map
+    // -------------------------------------------------- Section 2: Event Venue ----------------------------------------------//
+    // Map setup
     const map = L.map('map').setView([1.3521, 103.8198], 12);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
 
@@ -68,28 +24,30 @@ document.addEventListener("DOMContentLoaded", async function () {
     const searchLayer = L.layerGroup();
     searchLayer.addTo(map);
 
-    // Create marker cluster group
+    // ----------------------- Create venue marker cluster group -----------------------//
     const venueClusterLayer = L.markerClusterGroup({
         iconCreateFunction: function (cluster) {
             const childCount = cluster.getChildCount();
 
+            // add pink microphone marker to venue marker cluster group
             return L.divIcon({
                 html: `<div class="venue-cluster-icon"><img src="assets/img/map-markers/microphone.png">${childCount}</div>`,
                 className: 'venue-cluster',
-
                 iconSize: L.point(100, 100)
             });
         }
     });
-    venueClusterLayer.addTo(map);
 
+    // ------------------------------ Add venue marker ---------------------------------//
+    // add customised geojson to unique venue marker 
     const venueResponse = await axios.get('assets/data/venue.geojson');
     for (let venue of venueResponse.data.features) {
         let reversedCoordinates = [venue.geometry.coordinates[1], venue.geometry.coordinates[0]]; // Reverse coordinates
 
+        // Create yellow microphone marker as unique venue marker 
         const venueIcon = L.icon({
             iconUrl: 'assets/img/map-markers/microphone-zoom.png',
-            iconSize: [40, 40], // Size of the icon
+            iconSize: [40, 40],
             iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
             popupAnchor: [0, -32] // Point from which the popup should open relative to the iconAnchor
         });
@@ -100,7 +58,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Add marker to cluster layer
         venueClusterLayer.addLayer(venueMarker);
 
-
         // Add mouseover event listener
         venueMarker.on('mouseover', function (event) {
             venueMarker.openPopup(); // Open popup on mouseover
@@ -109,42 +66,27 @@ document.addEventListener("DOMContentLoaded", async function () {
         venueMarker.on('mouseout', function (event) {
             venueMarker.closePopup(); // Close popup on mouseout
         });
-
     }
+    // ---------------------------- End of venue markers -----------------------------//
 
-    // // Event Brite API
-    // const API_KEY = 'SJCOUGP4LMDOBEPTVRMH'; 
-    // const BASE_API_URL = "https://www.eventbriteapi.com/v3/";
-
-    // Create marker cluster group for other venues
-    // const otherClusterLayer = L.markerClusterGroup({
-    //     iconCreateFunction: function(cluster) {
-    //         const childCount = cluster.getChildCount();
-    //         return L.divIcon({
-    //             html: `<div class="other-cluster-icon"><img src="assets/img/map-markers/microphone_others.png">${childCount}</div>`,
-    //             className: 'event-cluster',
-    //             iconSize: L.point(40, 40)
-    //         });
-    //     }
-    // });
-    // otherClusterLayer.addTo(map);
-
+    // --------------------------- Add search function and markers ----------------------------//
     // Foursquare API
     const BASE_API_URL = "https://api.foursquare.com/v3";
     const API_KEY = "fsq3wvnLGd2aP9AqDQAVE8JuRvhzlab05d3vi2sdPjueMNE="
 
-    //Add markers to a map
-
+    //Add searched Foursquare API markers to a map
     async function addMarkersToMap(searchResults, layer, map) {
         // Remove all existing markers from the provided layer
         layer.clearLayers();
 
+        // resetting the content of the element before adding new content 
         const searchResultOutput = document.querySelector("#search-results");
-        searchResultOutput.innerHTML = "";
+        searchResultOutput.innerHTML = ""; // empty string to clear and reset searchResultOutput
 
+        // Create magnifying glass marker as search marker 
         const markerIcon = L.icon({
-            iconUrl: 'assets/img/map-markers/magnifying-glass.png', // Path to your new marker icon image
-            iconSize: [30, 30], // Size of the icon
+            iconUrl: 'assets/img/map-markers/magnifying-glass.png',
+            iconSize: [30, 30],
             iconAnchor: [20, 40], // Point of the icon which will correspond to marker's location
             popupAnchor: [0, -40] // Point from which the popup should open relative to the iconAnchor
         });
@@ -158,14 +100,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             const name = location.name;
             const marker = L.marker([lat, lng], { icon: markerIcon });
 
+            // bind 
             marker.bindPopup(function () {
                 const divElement = document.createElement('div');
                 divElement.innerHTML = `
                 <h5>${location.name}</h5>
-                <img src="#"/>
                 <p>${location.location.formatted_address}</p>
             `;
-                // <button class="btn btn-primary clickButton">Click</button> //
 
                 async function getPicture() {
                     const photos = await getPhotoFromFourSquare(location.fsq_id);
@@ -175,10 +116,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                 }
 
                 getPicture();
-
-                // divElement.querySelector(".clickButton").addEventListener("click", function () {
-                //             alert("Search stadium!");
-                // });
 
                 return divElement;
             });
@@ -259,8 +196,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     });
 
-    
-    // 2. Weather 
+
+    // --------------------------- Add weather (temperature) information ----------------------------//
     // Function to fetch weather data for a specific location (Open Meteo API)
     async function fetchWeatherData(latitude, longitude) {
         try {
@@ -279,9 +216,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             return null;
         }
     }
+    // --------------------------- End of weather (temperature) information ----------------------------//
 
+
+    // ------------------------------------ Add User's Planned Route ----------------------------------//
     // Leaflet Routing Machine
-    // Define control variable for Leaflet Routing Machine
+    // Add customised marker to user's planned route
     let userIcon = new L.Icon({
         iconUrl: 'assets/img/user.png',
         iconAnchor: [12, 41],
@@ -289,6 +229,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         shadowSize: [41, 41]
     });
 
+    // Add Leaflet Routing Machine's routing control 
     const control = L.Routing.control({
         routeWhileDragging: true,
         geocoder: L.Control.Geocoder.nominatim({
@@ -300,23 +241,22 @@ document.addEventListener("DOMContentLoaded", async function () {
                     icon: userIcon
                 });
             } else {
-                return L.marker(wp.latLng, {
-                    icon: myViaIcon
-                });
+                // Return error
+                return null;
             }
         }
     });
     control.addTo(map);
 
-    // navContainer - Get references to HTML elements 
+
+    // navContainer
     const navContainer = document.getElementById('navContainer');
     const startBtn = document.getElementById('startBtn');
     const destBtn = document.getElementById('destBtn');
     const weatherContainer = document.getElementById('weatherContainer');
 
-    // navContainer
-    map.on('click', function (e) {
-        taxiCluster.clearLayers();
+
+    map.on('click', async function (e) {
         // Create popups
         const navPopup = L.popup().setLatLng(e.latlng).setContent(navContainer);
         const weatherPopup = L.popup({
@@ -331,17 +271,17 @@ document.addEventListener("DOMContentLoaded", async function () {
         navContainer.appendChild(startBtn);
         navContainer.appendChild(destBtn);
 
-        // Append weather container to the weatherContainer
-        fetchWeatherData(e.latlng.lat, e.latlng.lng)
-            .then(weatherData => {
-                weatherContainer.innerHTML = `
-                    <h4>Weather Information</h4>
-                    <h5>Temperature: ${weatherData.hourly.temperature_2m[0]}°C</h5>
-                `;
-            })
-            .catch(error => {
-                console.error('Error fetching weather data:', error);
-            });
+        try {
+            // Fetch weather data
+            const weatherData = await fetchWeatherData(e.latlng.lat, e.latlng.lng);
+            // Set content for weatherContainer based on fetched data
+            weatherContainer.innerHTML = `
+                <h4>Weather Information</h4>
+                <h5>Temperature: ${weatherData.hourly.temperature_2m[0]}°C</h5>
+            `;
+        } catch (error) {
+            console.error('An error occurred while fetching weather data:', error);
+        }
 
         // Open popups on the map
         navPopup.addTo(map);
@@ -358,11 +298,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             map.closePopup();
         });
     });
-
-
-
-    let taxiCluster; 
-    let taxiVisible = false; 
+    // ------------------------------------ End of User's Planned Route ----------------------------------//
+    // Group taxi markers for available taxis in cluster
+    let taxiCluster;
+    let taxiVisible = false;
 
     document.getElementById("taxi").addEventListener("click", async function () {
         if (taxiVisible) {
@@ -384,7 +323,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
-    // redraw every 30 seconds
+    // redraw taxi markers every 30 seconds
     setInterval(async function () {
         if (taxiVisible) {
             // Only redraw taxi markers if they are visible
@@ -400,44 +339,57 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }, 30 * 1000);
 
+    async function loadTaxi() {
+        // load in all the available taxi using the Taxi Availablity API
+        const response = await axios.get("https://api.data.gov.sg/v1/transport/taxi-availability");
+        return response.data.features[0].geometry.coordinates;
+    }
 
-    // const overlayLayer = L.tileLayer('https://example.com/{z}/{x}/{y}.png', {
-    //     attribution: 'Your attribution here'
-    // }).addTo(map);
+    function drawTaxi(taxiPositions, taxiCluster) {
+        const taxiIcon = L.icon({
+            iconUrl: 'assets/img/map-markers/taxi-color.png',
+            iconSize: [32, 32], // Size of the icon
+            iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
+        });
+
+        for (let taxi of taxiPositions) {
+            const coordinate = [taxi[1], taxi[0]];
+            const marker = L.marker(coordinate, { icon: taxiIcon });
+
+            marker.addTo(taxiCluster);
+        }
+    }
+
+    const esriSatelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri',
+        maxZoom: 18
+    })
 
     const baseLayers = {
-        "Venue": venueClusterLayer,
-        "View Search Only": searchLayer
+        "View Search Only": searchLayer,
+        "Venue": venueClusterLayer
     };
 
-    // const overlayLayers = {
-    //     "Overlay Layer": overlayLayer
-    // };
+    const overlayLayers = {
+        "Satellite Layer": esriSatelliteLayer
+    };
 
-    L.control.layers(baseLayers).addTo(map);
+    L.control.layers(baseLayers, overlayLayers).addTo(map);
+    venueClusterLayer.addTo(map);
+    // --------------------------------------------- End of Section 2: Event Venue ------------------------------------------//
+
+
+    // --------------------------------------------------- Section 4: Subscribe ---------------------------------------------//
+    document.getElementById("subscribe-btn").addEventListener("click", function () {
+        // Add SweetAlert2 alert for subscribe button
+        Swal.fire({
+            title: "Welcome to the team",
+            text: "Stay tuned for more updates!",
+            icon: "success"
+        });
+    });
+    // ------------------------------------------- End of Section 4: Subscribe ---------------------------------------------//
 });
 
-
-async function loadTaxi() {
-    // load in all the available taxi using the Taxi Availablity API
-    const response = await axios.get("https://api.data.gov.sg/v1/transport/taxi-availability");
-    return response.data.features[0].geometry.coordinates;
-}
-
-function drawTaxi(taxiPositions, taxiCluster) {
-    const taxiIcon = L.icon({
-        iconUrl: 'assets/img/map-markers/taxi.png',
-        iconSize: [32, 32], // Size of the icon
-        iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
-    });
-
-
-    for (let taxi of taxiPositions) {
-        const coordinate = [taxi[1], taxi[0]];
-        const marker = L.marker(coordinate, { icon: taxiIcon });
-
-        marker.addTo(taxiCluster);
-    }
-}
 
 
