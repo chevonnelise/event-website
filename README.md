@@ -78,6 +78,7 @@ Scroll through and enjoy!
 * [Open Meteo Weather API](https://open-meteo.com/)
 * [GeoJSON.io](https://geojson.io/)
 * [Flaticons](https://www.flaticon.com/)
+* [SweetAlert2](https://sweetalert2.github.io/)
 
 
 

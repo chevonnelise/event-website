@@ -6,12 +6,20 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById("play-button-modal").style.display = "block";
     });
 
+    document.getElementById("subscribe-btn").addEventListener("click", function () {
+        Swal.fire({
+            title: "Welcome to the team",
+            text: "Stay tuned for more updates!",
+            icon: "success"
+          });
+    });
+
+    
+
     // Close the modal when the close button is clicked
     document.getElementsByClassName("close")[0].addEventListener("click", function () {
         document.getElementById("play-button-modal").style.display = "none";
     });
-
-
 
 
     // Close the modal when clicking outside of it
