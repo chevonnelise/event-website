@@ -12,6 +12,21 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.getElementsByClassName("close")[0].addEventListener("click", function () {
         document.getElementById("play-button-modal").style.display = "none";
     });
+
+    // Search button
+    // Select the search input field
+    const searchInput = document.getElementById('search-heart');
+
+    // Define the event listener function for the search input
+    function handleSearch(event) {
+        // Your code to handle the search event goes here
+        const searchTerm = event.target.value;
+        console.log('Search term:', searchTerm);
+        // You can perform additional actions based on the search term, such as filtering or displaying search results
+    }
+
+    // Attach the event listener to the search input field
+    searchInput.addEventListener('input', handleSearch);
     // ------------------------------------------------- End of Section 1: Welcome ------------------------------------------//
 
 
@@ -205,7 +220,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 params: {
                     latitude: latitude,
                     longitude: longitude,
-                    hourly: 'temperature_2m', 'time':12,
+                    hourly: 'temperature_2m', 'time': 12,
                     timezone: 'auto'
                 }
             });
@@ -278,7 +293,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             // Set content for weatherContainer based on fetched data
             weatherContainer.innerHTML = `
                 <h5>Weather Information</h5>
-                <p>Date & Time: ${ weatherData.hourly.time[12]}</p>
+                <p>Date & Time: ${weatherData.hourly.time[12]}</p>
                 <p>Temperature: ${weatherData.hourly.temperature_2m[12]}°C</p>
             `;
         } catch (error) {
