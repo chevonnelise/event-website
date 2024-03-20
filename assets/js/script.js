@@ -205,10 +205,11 @@ document.addEventListener("DOMContentLoaded", async function () {
                 params: {
                     latitude: latitude,
                     longitude: longitude,
-                    hourly: 'temperature_2m',
+                    hourly: 'temperature_2m', 'time':12,
                     timezone: 'auto'
                 }
             });
+            console.log(response);
             return response.data;
 
         } catch (error) {
@@ -276,8 +277,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             const weatherData = await fetchWeatherData(e.latlng.lat, e.latlng.lng);
             // Set content for weatherContainer based on fetched data
             weatherContainer.innerHTML = `
-                <h4>Weather Information</h4>
-                <h5>Temperature: ${weatherData.hourly.temperature_2m[0]}°C</h5>
+                <h5>Weather Information</h5>
+                <p>Date & Time: ${ weatherData.hourly.time[12]}</p>
+                <p>Temperature: ${weatherData.hourly.temperature_2m[12]}°C</p>
             `;
         } catch (error) {
             console.error('An error occurred while fetching weather data:', error);
