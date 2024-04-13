@@ -29,7 +29,7 @@ As users zoom out, they can locate clusters of performing venues marked by the p
 4. **Subscribe**
 - In this section, if users are keen on updates, they can submit their email to subscribe for latest updates.
     
-[Production Link](https://eras-tour-event-website.netlify.app/)\
+[Live Link](https://eras-tour-event-website.netlify.app/)\
 Scroll through and enjoy!
 
 ## Screenshots of Web Application
